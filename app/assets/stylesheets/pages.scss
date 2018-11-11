@@ -1,10 +1,69 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.center{
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
 
+#bckgrd{
+	background-color: white; 
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	opacity:0.8;
+	border-radius: 25px;
+	padding: 20px;
+	width: 65%;
+}
 
-  #teste {
-    color: blue;
-    font-size: 0.3em;
-    }
+#bckgrd-galery{
+	background-color: white; 
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	border-radius: 25px;
+	padding: 20px;
+	width: 65%;
+}
+#links{
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
 
+#thumb{
+	margin-bottom: 5px;
+	max-height: 138px;
+	border-radius: 9px;
+}
+
+/*B&W*/
+.bw {
+  -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+ 
+.bw:hover {
+  -webkit-filter: sepia(100%);
+}
+
+#corpo {
+	text-align: justify; text-indent: 2em;
+}
+#sub {
+	color: rgb(0,20,100); font-weight: bold; text-align: center;
+}
+#title {
+	color: rgb(0,20,100); font-weight: bold; text-align: center;
+}
+#subtitle {
+	color: rgb(0,0,0);
+}

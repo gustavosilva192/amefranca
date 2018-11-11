@@ -12,9 +12,6 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    
-  </head>
-  <body class="background-attachment: fixed-bg" bgcolor="#FFFFFF" ondragstart="return false" onselectstart="return false">
     <div class="wrapper">
 
         <nav>
@@ -23,24 +20,29 @@
           </div>
 
           <div class="logo" >
-            <img src="<%= asset_path('AME2.png') %>" height="30">
+            <a href="/about"> <img src="<%= asset_path('AME2.png') %>" height="30"></a>
           </div>
 
           <div class="menu">
             <ul>
-              <li><a href="#">Página Inicial</a></li>
-              <li><a href="#">Notícias</a></li>
-              <li><a href="#">Exames</a></li>
+              <li><%= link_to "Página inicial", "/"  %></li>
+              <li><%= link_to "Notícias", "/news"  %></li>
+              <li><a href="http://189.112.5.113/LaboratorioWeb/indexLaboratorio.jsp" target="new">Exames </a></li>
               <li><a href="#">Ouvidoria</a></li>
-              <li><a href="#">Informações ao Paciente</a></li>
-              <li><a href="#">Trabalhe Conosco</a></li>
-              <li><a href="#">Transparência</a></li>
+              <li><%= link_to "Informações ao Paciente", "/infos" %></li>
+              <li><%= link_to "Trabalhe conosco", "/edital" %></li>
+              <li><%= link_to "Transparência", "/transparency"  %></li>
             </ul>
           </div>
         </nav>
-        <div id="spacing"></div>
-        <%= yield %>
     </div>
+  </head>
+  <body class="background-attachment: fixed-bg" bgcolor="#FFFFFF" ondragstart="return false" onselectstart="return false">
+    
+      <div id="spacing"></div>
+      <div id="content">
+        <%= yield %>
+      </div>
   </body>
   <script type="text/javascript">
 

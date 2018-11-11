@@ -19,7 +19,7 @@ html, body {
       width: 100%;
 }
  
-body{
+body {
   font-family: 'Roboto', sans-serif;
   padding-bottom: 50px;
   background: url("foto_3_Copy.png");
@@ -35,6 +35,9 @@ body{
   background-size: cover;
 }
 
+#content{
+      padding: 40px;
+}
  
 header {
       width: 100%;
@@ -61,6 +64,7 @@ nav {
       position: fixed;
       width: 100%;
       line-height: 60px;
+      z-index: 2;
 }
  
 nav ul {

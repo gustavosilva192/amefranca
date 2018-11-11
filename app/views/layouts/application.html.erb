@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Amefranca</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+         <a href="#" class="brand-logo">AME Franca</a>
+
+         <ul class="right hide-on-med-and-down">
+
+           <li><a href="#" class="blue">Página Inicial</a></li>
+           <li><a href="#">Notícias</a></li>
+           <li><a href="#">Exames</a></li>
+           <li><a href="#">Ouvidoria</a></li>
+           <li><a href="#">Informações ao Paciente</a></li>
+           <li><a href="#">Trabalhe Conosco</a></li>
+           <li><a href="#">Transparência</a></li>
+
+         </ul>
+      </div>
+    </nav>
+    <section>
+      <%= yield %>
+    </section>
+  </body>
+  <script>
+     
+     $(document).ready(function(){
+          
+          $(window).scroll(function(){
+
+            if($(window).scrollTop()>300){
+              $('nav').addClass('red');
+            }else{
+              $('nav').removeClass('red');
+            }
+
+          });
+
+     });
+
+  </script>
+</html>

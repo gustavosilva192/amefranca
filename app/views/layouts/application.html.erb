@@ -2,7 +2,9 @@
 <html>
   <head>
     <title>Amefranca</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,44 +14,54 @@
 
     
   </head>
-  <nav>
-    <div class="nav-wrapper">
-       <a href="#" class="brand-logo">AME Franca</a>
+  <body class="background-attachment: fixed-bg" bgcolor="#FFFFFF" ondragstart="return false" onselectstart="return false">
+    <div class="wrapper">
 
-       <ul class="right hide-on-med-and-down">
+        <nav>
+          <div class="menu-icon">
+            <i class="fa fa-bars fa-2x"></i>
+          </div>
 
-         <li><a href="#" class="blue">Página Inicial</a></li>
-         <li><a href="#">Notícias</a></li>
-         <li><a href="#">Exames</a></li>
-         <li><a href="#">Ouvidoria</a></li>
-         <li><a href="#">Informações ao Paciente</a></li>
-         <li><a href="#">Trabalhe Conosco</a></li>
-         <li><a href="#">Transparência</a></li>
+          <div class="logo" >
+            <img src="<%= asset_path('AME2.png') %>" height="30">
+          </div>
 
-       </ul>
+          <div class="menu">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div id="spacing"></div>
+        <%= yield %>
     </div>
-  <body>
-    
-    </nav>
-    <section>
-      <%= yield %>
-    </section>
   </body>
-  <script>
-     
-     $(document).ready(function(){
-          
-          $(window).scroll(function(){
+  <script type="text/javascript">
 
-            if($(window).scrollTop()>300){
-              $('nav').addClass('red');
-            }else{
-              $('nav').removeClass('red');
+      // Menu-toggle button
+
+      $(document).ready(function() {
+            $(".menu-icon").on("click", function() {
+                  $("nav ul").toggleClass("showing");
+            });
+      });
+
+      // Scrolling Effect
+
+      $(window).on("scroll", function() {
+            if($(window).scrollTop()) {
+                  $('nav').addClass('black');
             }
 
-          });
+            else {
+                  $('nav').removeClass('black');
+            }
+      })
 
-     });
 
-  </script>
+      </script>
+
 </html>

@@ -3,40 +3,6 @@
     <meta charset="utf-8">
     <title>Bootstrap Image Gallery</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <link rel="stylesheet" href="blueimp-gallery.min.css">
-
-    <style>
-    #frameTransp{
-    	background-color: white; 
-    	position: absolute; 
-    	z-index:-1; 
-    	top:0; 
-    	left:0; 
-    	right:0; 
-    	bottom:0; 
-    	opacity:0.6;
-    	border-radius: 25px;
-    }
-    #thumb{
-    	margin-bottom: 5px;
-    	max-height: 138px;
-    	border-radius: 9px;
-    }
-    
-    /*B&W*/
-    .bw {
-      -webkit-transition: all 0.5s ease;
-         -moz-transition: all 0.5s ease;
-           -o-transition: all 0.5s ease;
-          -ms-transition: all 0.5s ease;
-              transition: all 0.5s ease;
-    }
-     
-    .bw:hover {
-      -webkit-filter: sepia(100%);
-    }
-    </style>
 
   </head>
   <body>
@@ -132,7 +98,6 @@
 				<br>
 		</div>
 
-  <script src="blueimp-gallery.min.js"></script>
   <script>
   document.getElementById('links').onclick = function (event) {
       event = event || window.event;

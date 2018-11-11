@@ -3,6 +3,10 @@
     <meta charset="utf-8">
     <title>Bootstrap Image Gallery</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Bootstrap JS is not required, but included for the responsive demo navigation and button states -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script src="http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
 
   </head>
   <body>
@@ -98,15 +102,6 @@
 				<br>
 		</div>
 
-  <script>
-  document.getElementById('links').onclick = function (event) {
-      event = event || window.event;
-      var target = event.target || event.srcElement,
-          link = target.src ? target.parentNode : target,
-          options = {index: link, event: event},
-          links = this.getElementsByTagName('a');
-      blueimp.Gallery(links, options);
-  };
-  </script>
+ 
   </body>
 </html>

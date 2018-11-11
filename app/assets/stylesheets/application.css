@@ -22,7 +22,7 @@ html, body {
 body{
   font-family: 'Roboto', sans-serif;
   padding-bottom: 50px;
-  background-image: url("foto_3_Copy.png");
+  background-image: url("../images/foto_3_Copy.png");
   /*    Set a specified height, or the minimum height for the background image */
   min-height: 500px;
   /* Set background image to fixed (don't scroll along with the page) */

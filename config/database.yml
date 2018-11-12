@@ -24,10 +24,11 @@ default: &default
 development:
   <<: *default
   database: amefranca_development
-  user: pguser
-  password: '@ax12wsd#'
+  user: postgres
+  password: 'amefranca'
   template: template0
   port: 5433
+  host: localhost
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -62,10 +63,11 @@ development:
 test:
   <<: *default
   database: amefranca_test
-  user: pguser
-  password: '@ax12wsd#'
+  user: postgres
+  password: 'amefranca'
   template: template0
   port: 5433
+  host: localhost
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is

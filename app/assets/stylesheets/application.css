@@ -16,7 +16,6 @@
 html, body {
       margin: 0;
       padding: 0;
-      width: 100%;
 }
  
 body {
@@ -99,7 +98,7 @@ nav ul li {
  
 nav ul li a {
       text-decoration: none;
-      color: rgba(0,0,0,0.8);
+      color: rgba(0,0,0,0.6);
       font-size: 16px;
       font-weight: bold;
 }

@@ -1,6 +1,9 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+  font-family: 'Roboto', sans-serif;
+}
 .center{
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
@@ -30,6 +33,7 @@
 	padding: 20px;
 	width: 65%;
 }
+
 #links{
 	margin-left: auto;
 	margin-right: auto;
@@ -42,34 +46,28 @@
 	border-radius: 9px;
 }
 
-/*B&W*/
-.bw {
-  -webkit-transition: all 0.5s ease;
-     -moz-transition: all 0.5s ease;
-       -o-transition: all 0.5s ease;
-      -ms-transition: all 0.5s ease;
-          transition: all 0.5s ease;
-}
- 
-.bw:hover {
-  -webkit-filter: sepia(100%);
-}
+/*Page About */ /*Page About */ 
 
 #corpo {
-	text-align: justify; text-indent: 2em;
+	text-align: justify; 
+  text-indent: 2em;
 }
 #sub {
-	color: rgb(0,20,100); font-weight: bold; text-align: center;
+	color: rgb(0,20,100); 
+  font-weight: bold; 
+  text-align: center;
 }
 #title {
-	color: rgb(0,20,100); font-weight: bold; text-align: center;
+	color: rgb(0,20,100); 
+  font-weight: bold; 
+  text-align: center;
 }
 #subtitle {
 	color: rgb(0,0,0);
 }
 
 
-/* Carousel Slide CSS */
+/* Carousel Slide CSS */ /* Page Galery */ 
 .galleryContainer{
     width: 100%;
     height: 500px;
@@ -159,7 +157,6 @@
     transform: rotateZ(45deg);
 }
 
-
 .galleryContainer .slideShowContainer>.captionTextHolder{
     position: absolute;
     bottom: 0;
@@ -202,9 +199,6 @@
     background-color: transparent;
 }
 
-
-
-
 .galleryContainer .moveLeftCurrentSlide{
     animation-name: moveLeftCurrent;
     animation-duration: 0.5s;
@@ -226,7 +220,6 @@
     from {margin-left: 100%;opacity: 1;}
     to {margin-left: 0%;opacity: 1;}
 }
-
 
 .galleryContainer .moveRightCurrentSlide{
     animation-name: moveRightCurrent;
@@ -267,7 +260,20 @@
     to {opacity: 1;margin-top: 0px;}
 }
 
-/* Slide from Home pages */
+/*Filtro B&W */
+.bw {
+  -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+ 
+.bw:hover {
+  -webkit-filter: sepia(100%);
+}
+
+/* Slide from Home pages */ /* Slide from Home pages */ /* Slide from Home pages */ /* Slide from Home pages */ /* Slide from Home pages */
 
 * {
   box-sizing: border-box;
@@ -303,3 +309,6 @@
 .slick-current {
   opacity: 1;
 }
+
+
+/* Page Infos */

@@ -6,38 +6,13 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" type="text/css" href="<%= asset_path('slick.css') %>">
   <link rel="stylesheet" type="text/css" href="<%= asset_path('slick-theme.css') %>">
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+  <script src="<%= asset_path('slick.js') %>" type="text/javascript" charset="utf-8"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <style>
-  	#jumbo{
-  		background: rgba(255,255,255,0.7);
-  		border-radius: 10px;
-  		margin-right: auto;
-  		margin-left: auto;
-  		display: block;
-  	}
-  	#title{
-  		margin: 2px;
-  		padding-left: 15px;
-  		padding-top: 10px;
-  		font-size: 25pt;
-  		text-align: left;
-  	}
-  	#links{
-  		padding-top: 10px;
-  	}
-
-		#sliderbck{
-		margin-right: auto;
-		margin-left: auto;
-		display: block;
-		padding: 0;
-		}
-
-  	@media only screen and (max-width: 700px) {
-  	    #divCaption{ display: none !important; }
-  	}
+  	a:hover{text-decoration: none;}
 	</style>
 </head>
 <body>
@@ -61,8 +36,7 @@
 		</div>
 	</div>
 
-  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-  <script src="<%= asset_path('slick.js') %>" type="text/javascript" charset="utf-8"></script>
+
   <script type="text/javascript">
 	$(document).ready(function(){
 		  $('.autoplay').slick({

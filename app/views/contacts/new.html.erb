@@ -1,0 +1,118 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+		<meta charset="UTF-8"> 
+		<script src="http://code.jquery.com/jquery.js"></script> 
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen"> 
+		<script src="bootstrap/js/bootstrap.min.js"></script> 
+		<style>
+			
+			#texto{
+				background: gray;
+				opacity: 0.8;
+				font-family: 'Roboto', sans-serif;
+        		font-size: 48px;
+				/*padding-right: 20px;*/
+				padding-left: 20px;
+				padding-top: 7px;
+				border-radius: 15px;
+			}
+			legend{
+				font-weight: bold;
+				text-align: center;
+			}
+			#Contato{
+				background-color: white; 
+				position: absolute; 
+				z-index:-1; 
+				top:0; 
+				left:0; 
+				right:0; 
+				bottom:0; 
+				opacity:0.6;
+				border-radius: 25px;
+			}
+			#sau{
+				margin-left: 10px;
+				border-radius: 25px;
+			}
+
+			#fone{
+				font-weight: bold;
+				font-size: 17pt;
+			}
+			#titulo{
+				font-weight: bold;
+				color: #001464;
+				font-size: 17pt;
+			}
+			span{
+				margin-right: 14px
+			}
+			#botao_enviar{
+				margin-top: 25px
+			}
+
+			body{font-family: 'Roboto', sans-serif;
+			}
+			#map{
+				margin-top: 5px;
+			}
+			@media only screen and (max-width: 700px) {
+			    #map{ width: 250px; }
+			}
+     	</style>
+	</head> 
+
+	<body> 
+		<p> <font id="titulo" > Este é o nosso canal de contato! </font> </p> 
+	    <div>
+	        <div class="col-md-6"> 
+	        	<div id="Contato">  </div>
+		        <fieldset>
+		        	<legend>Elogie, reclame, sugira! <br> O AME Franca ouve você!</legend>
+			       	<%= form_for @contact do |f| %>
+								<%= f.label :nome %><br>
+								<%= f.text_field :name, required: true, class: "form-control input-md" %>
+
+								<br>
+								<%= f.label :telefone %><br>
+								<%= f.text_field :telefone, class: "form-control input-md" %>
+
+								<br>
+								<%= f.label :mensagem %><br>
+								<%= f.text_area :message, as: :text, class: "form-control" %>
+
+								<div class="hidden">
+									<%= f.label :nickname %><br>
+									<%= f.text_field :nickname, hint: 'leave this field blank' %>
+								</div>
+								<br>
+								<%= f.label :tipo, 'Selecione o motivo de seu contato:' %> <br>
+							    <%= f.radio_button :tipo, 'Elogios', :checked => true %> Elogios <span></span>  
+							    <%= f.radio_button :tipo, 'Reclamações' %> Reclamações <span></span>
+							    <%= f.radio_button :tipo, 'Sugestões' %> Sugestões <span></span>
+							    <%= f.radio_button :tipo, 'Informações' %> Informações <span></span>
+							    <%= f.radio_button :tipo, 'Agradecimentos' %> Agradecimentos <br>
+								<div align="center" id="botao_enviar">
+									<%= f.submit 'Enviar', class: "btn btn-primary"%>
+								</div>
+							<% end %>
+					<br>
+					<h4 align="center" id="fone" > (16) 3707-4400	</h4>
+					<h4 align="center"> Rua Dr. Alcindo Ribeiro Conrado, 1395 - Centro <br> Franca - SP - CEP: 14400-350 <br> </h4>
+		        </fieldset>
+		    </div>
+	    </div>
+	    <div class="col-md-2" >
+		    	<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d1868.081171918692!2d-47.40372847263729!3d-20.54053748353611!3m2!1i1024!2i768!4f13.1!4m8!3e0!4m0!4m5!1s0x94b0a62ef6477213%3A0x83b1fc2c10e85e12!2sAME+de+Franca+-+Rua+Doutor+Alcindo+Ribeiro+Conrado%2C+1395+-+Centro%2C+Franca+-+SP%2C+14400-350%2C+Brasil!3m2!1d-20.5407701!2d-47.4034416!5e0!3m2!1spt-BR!2sbr!4v1445340969752" width="500" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+		    	<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d1868.081171918692!2d-47.40372847263729!3d-20.54053748353611!3m2!1i1024!2i768!4f13.1!4m8!3e0!4m0!4m5!1s0x94b0a62ef6477213%3A0x83b1fc2c10e85e12!2sAME+de+Franca+-+Rua+Doutor+Alcindo+Ribeiro+Conrado%2C+1395+-+Centro%2C+Franca+-+SP%2C+14400-350%2C+Brasil!3m2!1d-20.5407701!2d-47.4034416!5e0!3m2!1spt-BR!2sbr!4v1445340969752" width="500" height="300" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+		</div>
+		<script src="../javascripts/javascript.js"></script>
+
+	</body> 
+
+</html>
+

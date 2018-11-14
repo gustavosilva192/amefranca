@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'noticias/galery'
-  get 'pages/transparency'
    root 'pages#home'
    
    get "about" => "pages#about", as: :about
@@ -16,5 +14,7 @@ Rails.application.routes.draw do
    get "transparency" => "pages#transparency", as: :transparency
 
    get "galery" => "noticias#galery", as: :galery
+
+   resources :contacts, only: [:new, :create]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

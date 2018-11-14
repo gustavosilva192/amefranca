@@ -1,2 +1,131 @@
-<h1>Pages#news</h1>
-<p>Find me in app/views/pages/news.html.erb</p>
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+		<meta charset="utf-8">
+		<title>Sobre</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<style type="text/css">
+			<;!-- h1 {font-weight: bold;}
+				h1 {color: rgb(0,20,100); font-weight: bold; text-align: center;}
+				h4 {color: rgb(0,0,0);}
+				#corpo {text-align: justify; text-indent: 2em;}
+				#sub {color: rgb(0,20,100); font-weight: bold; text-align: center;}
+			-->
+		</style>
+		<style>
+			#texto{
+				background: white;
+				opacity: 0.8;
+				padding-right: 20px;
+				padding-left: 20px;
+				padding-top: 7px;
+				border-radius: 25px;
+				
+			}
+			#backgroundTransparent{
+				background-color: rgba(255,255,255,0.5); 
+				position: absolute;
+				z-index:-1; 
+				top:0; 
+				left:0; 
+				right:0; 
+				bottom:0; 
+				opacity:0.8;
+				border-radius: 25px;
+			}
+			#especialidade{
+				border-radius: 10px;
+			}
+			#sau{
+				border-radius: 10px;
+				max-height: 400px;
+			}
+			#impostos{
+				max-width: 320px;
+				margin-bottom: 3px;
+			}
+
+			body{font-family: 'Roboto', sans-serif;
+			}
+			#thumb{
+				max-height: 100px;
+				margin-top: 20px;
+			}
+			#description{
+				margin-top: 20px;
+				margin-bottom: 20px;
+				max-height: 100px;
+			}
+			#topics{
+				padding: 20px;
+			}
+			#title{
+				text-align: center;
+				font-weight: bold;
+			}
+			h5{
+				font-weight: bold;
+			}
+
+			h6{
+				color: gray;
+			}
+
+/*			@media only screen and (max-width: 991px) {
+			    #description{ display: none !important; }
+			}*/
+			a:hover {
+			    text-decoration: none;
+			}
+			
+    	</style>
+	</head>
+	
+	<body>
+		<div  class="col-lg-12">
+		<br>
+			<div id="backgroundTransparent"></div>
+			<h3 id="title" > Notícias </h3>
+			<div class="col-lg-12" id="topics" >
+				<div class="col-md-3">
+					<a href="/novembroAzul"> <img class="img-responsive" id="thumb" src="<%= asset_path('CarouselSlide2.jpg') %>" > </a>
+				</div>
+				<div class="col-md-9" id="description" align="left" >
+					<a href="/novembroAzul" style="color: black"> <h6> 07/11/2016</h6> <p> <h5> Novembro Azul 2016!</h5> </p> </a>
+				</div>
+			</div>
+			<div class="col-lg-12" id="topics" >
+				<div class="col-md-3">
+					<a href="/outubroRosa"> <img class="img-responsive" id="thumb" src="<%= asset_path('outRosa.png') %>" > </a>
+				</div>
+				<div class="col-md-9" id="description" align="left" >
+					<a href="/outubroRosa" style="color: black"> <h6> 06/10/2016</h6> <p> <h5> O diagnóstico precoce pode salvar sua vida!</h5> </p> </a>
+				</div>
+			</div>
+			<div class="col-lg-12" id="topics" >
+				<div class="col-md-3">
+					<a href="/galery"> <img class="img-responsive" id="thumb" src="<%= asset_path('banner1.jpg') %>" > </a>
+				</div>
+				<div class="col-md-9" id="description" align="left" >
+				<a href="/galery" style="color: black"><h6> 17/08/2016</h6> <p> <h5> Selecionamos algumas imagens para você conhecer melhor o AME Franca, confira! </h5></p> </a>
+				</div>
+			</div>
+			<div class="col-lg-12" id="topics" >
+				<div class="col-md-3">
+					<a href="/dengue"> <img class="img-responsive" id="thumb" src="<%= asset_path('CarouselSlide.jpg') %>" > </a>
+				</div>
+				<div class="col-md-9" id="description" align="left" >
+					<a href="/dengue" style="color: black"> <h6> 17/08/2016</h6> <p> <h5> Confira aqui algumas dicas de como combater o mosquito.</h5> </p> </a>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+
+	<footer>
+	</footer>
+
+</html>

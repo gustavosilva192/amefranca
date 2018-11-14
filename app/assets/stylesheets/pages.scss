@@ -1,9 +1,12 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* All Pages */
 body{
   font-family: 'Roboto', sans-serif;
 }
+
 .center{
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
@@ -51,11 +54,6 @@ body{
 #corpo {
 	text-align: justify; 
   text-indent: 2em;
-}
-#sub {
-	color: rgb(0,20,100); 
-  font-weight: bold; 
-  text-align: center;
 }
 #title {
 	color: rgb(0,20,100); 
@@ -309,6 +307,75 @@ body{
 .slick-current {
   opacity: 1;
 }
+#jumbo{
+  background: rgba(255,255,255,0.7);
+  border-radius: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+#title{
+  margin: 2px;
+  padding-left: 15px;
+  padding-top: 10px;
+  font-size: 25pt;
+  text-align: left;
+}
+#links{
+  padding-top: 10px;
+}
 
+#sliderbck{
+margin-right: auto;
+margin-left: auto;
+display: block;
+padding: 0;
+}
+
+@media only screen and (max-width: 700px) {
+    #divCaption{ display: none !important; }
+}
 
 /* Page Infos */
+
+#heading{
+  background-color: #2098d1;
+}
+.panel-body{
+  background-color: rgba(211,211,211,0.7);
+}
+#subl{
+  text-decoration: underline;
+}
+#sobreimg{
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.bs-example{
+  margin: 20px;
+}
+#frametexto{
+  background-color: rgba(255,255,255,0.5); 
+  position: absolute; 
+  z-index:-1; 
+  top:0; 
+  left:0; 
+  right:0; 
+  bottom:0; 
+  opacity:0.8;
+  border-radius: 25px;
+}
+#corpoq {text-align: center; text-indent: 2em; margin-left: 30px; margin-right: 30px; color: black; font-size: 15px;}
+#sub {
+  color: rgb(0,20,100); 
+  font-weight: bold; 
+  text-align: center;
+}
+#texto{
+  background: white;
+  opacity: 0.8;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 7px;
+  border-radius: 25px;
+}

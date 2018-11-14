@@ -2,17 +2,15 @@
 <html>
   <head>
     <title>Amefranca</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <nav>
       <div class="menu-icon">
@@ -28,7 +26,7 @@
           <li><%= link_to "Página inicial", "/"  %></li>
           <li><%= link_to "Notícias", "/news"  %></li>
           <li><a href="http://189.112.5.113/LaboratorioWeb/indexLaboratorio.jsp" target="new">Exames </a></li>
-          <li><a href="#">Ouvidoria</a></li>
+          <li><a href="/contacts/new">Ouvidoria</a></li>
           <li><%= link_to "Informações ao Paciente", "/infos" %></li>
           <li><%= link_to "Trabalhe conosco", "/edital" %></li>
           <li><%= link_to "Transparência", "/transparency"  %></li>

@@ -1,2 +1,101 @@
-<h1>Pages#contact</h1>
-<p>Find me in app/views/pages/contact.html.erb</p>
+<!DOCTYPE html> 
+<html> 
+	<head> 
+		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+		<title>Formulário do Linha de Código</title> 
+		<meta charset="UTF-8"> 
+		<script src="http://code.jquery.com/jquery.js"></script> 
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen"> 
+		<script src="bootstrap/js/bootstrap.min.js"></script> 
+		<style>
+			#texto{
+				background: gray;
+				opacity: 0.8;
+				/*padding-right: 20px;*/
+				padding-left: 20px;
+				padding-top: 7px;
+				border-radius: 15px
+			}
+			label{color: black;}
+			.help-block{color: rgb(0,0,0);}
+			#name{background-color: white; }
+			legend{color: rgb(0,20,100); 
+				font-weight: bold;
+			}
+			#frameTransp{
+				background-color: white; 
+				position: absolute; 
+				z-index:-1; 
+				top:0; 
+				left:0; 
+				right:0; 
+				bottom:0; 
+				opacity:0.6;
+				border-radius: 25px;
+			}
+
+			body{font-family: 'Roboto', sans-serif;
+			}
+			
+    	</style>
+	</head> 
+
+	<body> 
+		<div class="container">
+	        <div class="col-md-5">
+	        	<div id="frameTransp"></div>
+		        <form class="form-horizontal">
+			        <fieldset>
+				        <!-- Form Name -->
+				        <legend>Contato</legend>
+
+				        <!-- Text input-->
+				        <div class="form-group">
+				          <label class="col-md-3 control-label" for="name">Nome</label>  
+				          <div class="col-md-9" id="nome">
+				          <input id="name" name="name" type="text" placeholder="Nome" class="form-control input-md">
+				          <span class="help-block">Digite seu nome*</span>  
+				          </div>
+				        </div>
+
+				        <!-- Text input-->
+				        <div class="form-group">
+				          <label class="col-md-3 control-label" for="email">Email</label>  
+				          <div class="col-md-9">
+				          <input id="email" name="email" type="text" placeholder="Email" class="form-control input-md">
+				          <span class="help-block">Digite seu email</span>  
+				          </div>
+				        </div>
+
+				        <!-- Text input-->
+				        <div class="form-group">
+				          <label class="col-md-3 control-label" for="telefone">Telefone</label>  
+				          <div class="col-md-9">
+				          <input id="telefone" name="telefone" type="text" placeholder="Telefone" class="form-control input-md">
+				          <span class="help-block">Digite seu telefone</span>  
+				          </div>
+				        </div>
+
+				        <!-- Textarea -->
+				        <div class="form-group">
+				          <label class="col-md-3 control-label" for="msg">Mensagem</label>
+				          <div class="col-md-9">                     
+				            <textarea class="form-control" id="msg" name="msg" placeholder="Mensagem"></textarea>
+				            <span class="help-block">Digite sua mensagem</span>
+				          </div>
+				        </div>
+
+				        <!-- Button -->
+				        <div class="form-group">
+				          <label class="col-md-4 control-label" for="enviar"></label>
+				          <div class="col-md-8">
+				            <button id="enviar" name="enviar" class="btn btn-primary">Enviar</button>
+				          </div>
+				        </div>
+			        </fieldset>
+		        </form>
+		    </div>
+	    </div>
+		<script src="../javascripts/javascript.js"></script>
+	</body> 
+</html>

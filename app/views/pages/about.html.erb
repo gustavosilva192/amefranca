@@ -5,15 +5,20 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<style>
-	 	a:hover{text-decoration: none;}
+	 	a:hover,
+    a:visited,
+    a:active,
+    a:link {
+      text-decoration: none;
+    }
+    body{font-family: 'Roboto', sans-serif;}
 	</style>
 </head>
 <body>
-	
-	<div id="bckgrd" class="wrapper">
+	<div id="bckgrd" class="col-lg-12">
 		<img id="sobreimg" class="center" src="<%= asset_path('ame_about3.jpg') %>">
 
-		  <p align="center"><h1 id="title">Ambulatório Médico de Especialidade de Franca<br> AME Franca </h1></center> <br>
+		  <h1 id="titleabout">Ambulatório Médico de Especialidade de Franca<br> AME Franca </h1> <br>
 			<h4 id="subtitle"><p id="corpo">O AME é um ambulatório de diagnóstico e orientação terapêutica em especialidades médicas, de alta resolutividade, com ênfase nas necessidades da rede básica, e que proporciona atendimento de forma acessível ao cidadão através da prestação de um conjunto de serviços que garantam uma intervenção rápida e eficaz para promover o diagnóstico precoce e orientar a terapêutica frente a problemas de saúde prevalentes, atendendo a necessidade regional.</p>
 			<p id="corpo">O Ambulatório Médico de Especialidades “Dr. Cirilo Barcelos” – AME Franca é gerenciado pela OSS Santa Casa de Misericórdia de Franca, Hospital Ensino reconhecido pelo MEC, através de Contrato de Gestão firmado com a Secretaria do Estado de Saúde (SES)-SP, este contrato discrimina as atribuições, responsabilidades e obrigações na operacionalização da gestão, compreendendo a execução das atividades e serviços de assistência à saúde, bem como a sistemática econômico-financeira da gestão. </p>
 			<p id="corpo">A execução dos recursos, repassados a título de custeio e investimento, é realizado exclusivamente pelo próprio AME Franca, que se encarrega das compras, contratos de terceiros, recebimento de mercadorias, administração do almoxarifado e farmácia. Possui todos os departamentos na própria unidade: financeiro, contabilidade, administração de pessoal e SESMT, compras, assessoria de qualidade e humanização. </p>

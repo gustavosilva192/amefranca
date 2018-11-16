@@ -118,31 +118,31 @@ nav ul li:hover{
 }
  
 @media(max-width: 1200px) {
-  .logo {
-    position: fixed;
-    top: 0;
-    margin-top: 16px;
+    .logo {
+      position: fixed;
+      top: 0;
+      margin-top: 16px;
+    }
+  nav ul {
+    max-height: 0px;
+    background-color: rgba(255,255,255, 0.7); 
   }
-}
-nav ul {
-  max-height: 0px;
-  background-color: rgba(255,255,255, 0.7); 
-}
 
-.showing {
-  max-height: 34em;
-}
+  .showing {
+    max-height: 34em;
+  }
 
-nav ul li {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 24px;
-  text-align: center;
-}
+  nav ul li {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 24px;
+    text-align: center;
+  }
 
-.menu-icon {
-  display: block;
-  background-color: rgba(255,255,255, 0.7); 
-  color: black;
+  .menu-icon {
+    display: block;
+    background-color: rgba(255,255,255, 0.7); 
+    color: black;
+  }
 }
 

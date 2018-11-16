@@ -31,6 +31,40 @@ body {
   background-size: cover;
 }
 
+#btn-intra {
+  cursor: pointer;
+  background: #328fb5;
+  border: 1px solid #94ced0;
+  font-size: 16px;
+  margin-bottom: 9px;
+  text-align: left;
+  color: #fff;
+  padding: 2px 5px 1px 9px;
+  border-radius: 10px;
+  float: right;
+}
+div.col-lg-12{
+  margin-top: 60px;
+}
+#btn-sair{
+  cursor: pointer;
+  background: #328fb5;
+  border: 1px solid #94ced0;
+  font-size: 16px;
+  width: 65px;
+  margin-bottom: 9px;
+  text-align: left;
+  color: #fff;
+  padding: 2px 5px 1px 9px;
+  border-radius: 10px;
+  float: right;
+  background-image: url("exit_icon.png");
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position: right;
+}
+
+
 #content{
   padding: 40px;
 }
@@ -118,11 +152,14 @@ nav ul li:hover{
 }
  
 @media(max-width: 1200px) {
-    .logo {
-      position: fixed;
-      top: 0;
-      margin-top: 16px;
-    }
+  .logo {
+    position: fixed;
+    top: 0;
+    margin-top: 9px;
+    line-height: 10px;
+  }
+  nav{
+  }
   nav ul {
     max-height: 0px;
     background-color: rgba(255,255,255, 0.7); 
@@ -131,7 +168,6 @@ nav ul li:hover{
   .showing {
     max-height: 34em;
   }
-
   nav ul li {
     box-sizing: border-box;
     width: 100%;
@@ -143,6 +179,9 @@ nav ul li:hover{
     display: block;
     background-color: rgba(255,255,255, 0.7); 
     color: black;
+    max-height: 50px;
+    padding-top: 0;
   }
 }
+
 

@@ -1,0 +1,64 @@
+<html >
+  <head>
+    <style >
+      input[type=text],
+      input[type=email],
+      input[type=password] {
+        color: #666666;
+        width: 100%;
+        border: 1px solid #E6E6E6;
+        border-radius: 0px; 
+        height: 60px;
+        margin: 6px auto;
+        text-indent: 10px; 
+      }
+
+      .btn-submit {
+        color: #FFFFFF;
+        font-size: 18px;
+        text-transform: uppercase;
+        background: #c91717;
+        padding: 10px 20px;
+        border: 0;
+        margin-top: 6px;
+      }
+
+      .form {
+        text-align:center;
+        margin: 0 auto 10px;
+        padding: 20px 0 10px 0;
+        font-size: 16px;
+        width: 300px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="login">
+      <div class="container" >
+        <div class="form">
+          <h1>Atualize seu cadastro</h1>
+
+          <%= form_for @user do |f| %>
+            <%= f.label :Nome %>
+            <%= f.text_field :first_name, class: 'form-control' %>
+
+            <%= f.label :Sobrenome %>
+            <%= f.text_field :last_name, class: 'form-control' %>
+
+            <%= f.label :Email %>
+            <%= f.email_field :email, class: 'form-control' %>
+
+            <%= f.label :Senha %>
+            <%= f.password_field :password, class: 'form-control' %>
+
+            <%= f.label :Confirme, "Confirme sua senha" %>
+            <%= f.password_field :password_confirmation, class: 'form-control' %>
+            <%= f.submit "Salvar alteração", class: "btn-submit" %>
+          <% end %>
+          <%= link_to 'Back', {:action => 'show', :id =>@user} %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

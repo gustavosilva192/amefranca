@@ -4,68 +4,20 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <meta charset="utf-8">
     <title>Novembro Azul</title>
-    <%= stylesheet_link_tag "application", :media => "all" %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <%= javascript_include_tag "application" %>
     <style type="text/css">
-      h1 {color: #0641a0; font-weight: bold; text-align: center;}
-      h2 {color: red; font-weight: bold; text-align: center; }
-      h3 {font-weight: bold; font-style:italic }
-      h4 {color: rgb(0,0,0);}
-      h6 {font-weight: italic; color: gray;}
-      #corpo {text-align: justify; text-indent: 2em;}
-      #sub {color: rgb(0,20,100); font-weight: bold; text-align: center;}
-      #texto{
-        background: white;
-        opacity: 0.5;
-        padding-right: 20px;
-        padding-left: 20px;
-        padding-top: 7px;
-        border-radius: 25px;
-      }
-      #frametexto{
-        background-color: white; 
-        position: absolute; 
-        z-index:-1; 
-        top:0; 
-        left:0; 
-        right:0; 
-        bottom:0; 
-        opacity:0.8;
-        border-radius: 25px;
-      }
-      #sobreimg{
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-      }
-      #divsobre{
-        padding-top: 15px;
-      }
-      #link{
-        text-align: center;
-      }
-      .img-responsive{
-        width: 100%;
-      }
-      p{
-        text-indent: 2em;
-      }
+      a:hover, a:visited, a:active,a:link { text-decoration: none; }
 
-      body{font-family: 'Roboto', sans-serif;
-      }
-      #mama{
-        max-height: 500px;
-        max-width: 634px;
-      }
-      
-      </style>
+      body { font-family: 'Roboto', sans-serif; }
+     
+    </style>
   </head>
 
   <body>
     <div id="divsobre" class="col-lg-12" >
       <img id="sobreimg" class="img-responsive" src="<%= asset_path('novembroAzulPage.jpg') %>">
       <h6>Publicado: Segunda, 07 de Novembro de 2016, 10:27</h6>
-      <div id="frametexto"></div>
+      <div id="frameTextoNews"></div>
       <p align="center" ><h1>Novembro Azul 2016</h1></center> <br>
       <h4> <p>
       Novembro Azul é uma campanha de conscientização realizada por diversas entidades no mês de novembro dirigido à sociedade e, em especial, aos homens, para conscientização a respeito de doenças masculinas, com ênfase na prevenção e no diagnóstico precoce do câncer de próstata.

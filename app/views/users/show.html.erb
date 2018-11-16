@@ -1,0 +1,10 @@
+<h1><%= @user.email %></h1>
+
+<p>
+   Nome: <%= @user.first_name %><br />
+   Sobrenome:  <%= @user.last_name %><br />
+</p>
+
+<hr />
+
+<%= link_to 'Voltar', {:action => 'list'} %>

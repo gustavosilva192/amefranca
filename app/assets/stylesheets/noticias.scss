@@ -1,3 +1,65 @@
 // Place all the styles related to the Noticias controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* All News */
+.img-responsive{
+  width: 100%;
+}
+
+#frameTextoNews{
+  background-color: white; 
+  position: absolute; 
+  z-index:-1; 
+  top:0; 
+  left:0; 
+  right:0; 
+  bottom:0; 
+  opacity:0.8;
+  border-radius: 25px;
+  padding: 15px;
+}
+
+#divsobre{
+  padding-top: 15px;
+}
+
+#sobreimg{
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+h1 {
+	color: #0567A7; 
+	font-weight: bold; 
+	text-align: center;
+}
+
+h2 {
+	color: red; 
+	font-weight: bold; 
+	text-align: center; 
+}
+
+h4 {
+	color: rgb(0,0,0);
+}
+
+h6 {
+	font-weight: italic; 
+	color: gray;
+}
+
+p {
+  text-indent: 2em;
+}
+
+#link{
+  text-align: center;
+}
+
+/* Outubro Rosa */
+#mama{
+  max-height: 500px;
+  max-width: 634px;
+}

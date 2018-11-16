@@ -1,0 +1,61 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+input[type=text],
+input[type=email],
+input[type=password] {
+  color: #666666;
+  width: 100%;
+  border: 1px solid #E6E6E6;
+  border-radius: 0px; 
+  height: 60px;
+  margin: 6px auto;
+  text-indent: 10px;
+}
+
+.btn-submit {
+  color: #FFFFFF;
+  font-size: 18px;
+  text-transform: uppercase;
+  background: #c91717;
+  padding: 10px 20px;
+  border: 0;
+  margin-top: 6px;
+}
+
+.form {
+  text-align:center;
+  margin: 0 auto 10px;
+  padding: 20px 0 10px 0;
+  font-size: 16px;
+  width: 300px;
+}
+.notice, .error, .warning, .info {
+font-weight: bold;
+margin: -10px 0 15px 0;
+padding: 5px 5px 5px 27px;
+}
+
+.notice {
+border: 1px solid #9c9;
+background: #e2f9e3 url(../images/tick.png) no-repeat 5px center;
+color: #060;
+}
+
+.error {
+border: 1px solid #c68484;
+background: #fcc url(../images/cross.png) no-repeat 5px center;
+color: #c00;
+}
+
+.warning {
+border: 1px solid #dd0;
+background: #ffc url(../images/error.png) no-repeat 5px center;
+color: #000;
+}
+
+.info {
+border: 1px solid #82c2d4;
+background: #ebf5f8 url(../images/information.png) no-repeat 5px center;
+color: #000;
+}

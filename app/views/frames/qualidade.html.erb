@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+		<meta charset="utf-8">
+		<title>Qualidade</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<meta charset="utf-8">
+	</head>
+
+	<body>
+		<h1 id="title"> Qualidade</h1>
+		<div class="container" id="btns">
+			<button onclick="myFunction('1', '0')" id="1" class="btn btn-primary btn-sm" type="button" data-toggle="collapse" data-target="#gerRis" aria-expanded="false" aria-controls="gerRis">
+				Ger. de Riscos
+			</button>
+			<button onclick="myFunction('6', '1')" id="6" class="btn btn-primary btn-sm" type="button" data-toggle="collapse" data-target="#gesAmb" aria-expanded="false" aria-controls="gesAmb">
+				Gestão Ambiental
+			</button>
+			<button onclick="myFunction('4', '1')" id="4" class="btn btn-primary btn-sm" type="button" data-toggle="collapse" data-target="#indicadores" aria-expanded="false" aria-controls="indicadores">
+		  		Indicadores
+			</button>
+			<button onclick="myFunction('5', '1')" id="5" class="btn btn-primary btn-sm" type="button" data-toggle="collapse" data-target="#manuais" aria-expanded="false" aria-controls="manuais">
+		  		Manuais/POPs
+			</button>
+			<button onclick="myFunction('2', '1')" id="2" class="btn btn-primary btn-sm" type="button" data-toggle="collapse" data-target="#matDoc" aria-expanded="false" aria-controls="matDoc">
+			 	Matrizes de Doc.
+			</button>
+			<button onclick="myFunction('3', '1')" id="3" class="btn btn-primary btn-sm" type="button" data-toggle="collapse" data-target="#proQua" aria-expanded="false" aria-controls="proQua">
+			 	Pg. de Qualidade
+			</button>
+			<button onclick="myFunction('0', '1')" id="0" class="btn btn-primary btn-sm" type="button" data-toggle="collapse" data-target="#segPac" aria-expanded="false" aria-controls="segPac">
+				Seg. do Paciente
+			</button>
+		</div>
+			<div class="col-md-12 col-centered" id="collapse">
+				<div class="collapse" id="segPac">
+				  <div class="well">
+						<h4>Segurança do Paciente</h4>
+						<%= link_to "Manual POP Tasy", {:controller=>"pages", :action=>'pdff', :filename=>'2012-sbseg-mc2.pdf'}, :target=>'_blank'%>
+				  </div>
+				</div>
+			</div>
+			<div class="col-md-12 col-centered" id="collapse">
+				<div class="collapse" id="gerRis">
+				  <div class="well">
+				  	<h4>Gerenciamento de Risco</h4>
+						<%= link_to "Manual POP Tasy", {:controller=>"pages", :action=>'pdff', :filename=>'2012-sbseg-mc2.pdf'}, :target=>'_blank'%>
+				  </div>
+				</div>
+			</div>
+			<div class="col-md-12 col-centered" id="collapse">
+				<div class="collapse" id="matDoc">
+				  <div class="well">
+						<h4>Matrizes de Documentos</h4>
+						<%= link_to "Manual POP Tasy", {:controller=>"pages", :action=>'pdff', :filename=>'2012-sbseg-mc2.pdf'}, :target=>'_blank'%>
+				  </div>
+				</div>
+			</div>
+			<div class="col-md-12 col-centered" id="collapse">
+				<div class="collapse" id="proQua">
+				  <div class="well">
+						<h4>Programa de Qualidade</h4>
+						<%= link_to "Manual POP Tasy", {:controller=>"pages", :action=>'pdff', :filename=>'2012-sbseg-mc2.pdf'}, :target=>'_blank'%>
+				  </div>
+				</div>
+			</div>
+			<div class="col-md-12 col-centered" id="collapse">
+				<div class="collapse" id="indicadores">
+				  <div class="well">
+						<h4>Indicadores</h4>
+						<%= link_to "Manual POP Tasy", {:controller=>"pages", :action=>'pdff', :filename=>'2012-sbseg-mc2.pdf'}, :target=>'_blank'%>
+						<h4>Documentos para download</h4>
+						<%= link_to "2012-sbseg-mc2.pdf -", {:controller=>"pages", :action=>'pdff', :filename=>'2012-sbseg-mc2.pdf'}, :target=>'_blank'%>
+						<%= link_to "Download", {:controller=>"pages", :action=>'pdff', :filename=>'2012-sbseg-mc2.pdf', :disposition => 'attachment' }, :target=>'_blank'%>
+						<br>
+						<%= link_to "teste cópia.pdf", {:controller=>"pages", :action=>'pdff', :filename=>'teste cópia.pdf'}, :target=>'_blank'%>
+						<br>
+						<%= link_to "Teste pop", {:controller=>"pages", :action=>'pdff', :filename=>'POP 01-DP-Realização de Ocorrência de Ponto Tasy-01- Rev00..pdf'}, :target=>'_blank'%> 
+						<br>
+						<%= link_to "Tecnologia da Informação", {:controller=>"pages", :action=>'pdff', :filename=>'teste cópia.pdf'}, :target=>'_blank'%>
+						<br>
+						<%= link_to "Download", {:controller=>"pages", :action=>'pdff', :filename=>'teste cópia.pdf'}, :target=>'_blank'%>
+						<br>
+				  </div>
+				</div>
+			</div>
+			<div class="col-md-12 col-centered" id="collapse">
+				<div class="collapse" id="manuais">
+				  <div class="well">
+						<h4>Manuais/Protocolos/POPs</h4>
+						<%= link_to "Manual POP Tasy", {:controller=>"pages", :action=>'pdff', :filename=>'2012-sbseg-mc2.pdf'}, :target=>'_blank'%>
+				  </div>
+				</div>
+			</div>
+			<div class="col-md-12 col-centered" id="collapse">
+				<div class="collapse" id="gesAmb">
+				  <div class="well">
+						<h4>Gestão Ambiental</h4>
+						<%= link_to "Manual POP Tasy", {:controller=>"pages", :action=>'pdff', :filename=>'2012-sbseg-mc2.pdf'}, :target=>'_blank'%>
+				  </div>
+				</div>
+			</div>
+		<script>
+			$('#myCollapsible').collapse({
+			  toggle: false
+			})
+
+			function myFunction(name, name2) {
+				var x = document.getElementById("btns");
+				var y = x.getElementsByTagName("BUTTON");
+				var z = document.getElementById(name2).disabled;
+				var i;
+				if (z == false) {
+					for (i = 0; i < y.length; i++) {
+					  y[i].disabled = true;
+					  document.getElementById(name).disabled = false;
+					}
+				}else{
+					for (i = 0; i < y.length; i++) {
+					  y[i].disabled = false;
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

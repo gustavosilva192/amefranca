@@ -1,0 +1,15 @@
+<% if @user.blank? %>
+	<p>Não há usuários cadastrados.</p>
+<% else %>
+	<p>Esses são os usuários cadastrados no website</p>
+
+	<ul id = "user">
+	 	<% @user.each do |c| %>
+	   		<li>
+	   		   <%= link_to c.email, {:action => "show", :id => c.id} %>
+	   		   <b> <%= link_to 'Edit', {:action => "edit", :id => c.id} %></b>
+	   		</li>
+	  	<% end %>
+	</ul>
+
+<% end %>

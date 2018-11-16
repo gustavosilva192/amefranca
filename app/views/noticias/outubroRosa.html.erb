@@ -4,67 +4,18 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <meta charset="utf-8">
     <title>Sobre</title>
-    <%= stylesheet_link_tag "application", :media => "all" %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <%= javascript_include_tag "application" %>
     <style type="text/css">
-      h1 {color: #f442d7; font-weight: bold; text-align: center;}
-      h2 {color: red; font-weight: bold; text-align: center; }
-      h4 {color: rgb(0,0,0);}
-      h6 {font-weight: italic; color: gray;}
-      #corpo {text-align: justify; text-indent: 2em;}
-      #sub {color: rgb(0,20,100); font-weight: bold; text-align: center;}
-      #texto{
-        background: white;
-        opacity: 0.5;
-        padding-right: 20px;
-        padding-left: 20px;
-        padding-top: 7px;
-        border-radius: 25px;
-      }
-      #frametexto{
-        background-color: white; 
-        position: absolute; 
-        z-index:-1; 
-        top:0; 
-        left:0; 
-        right:0; 
-        bottom:0; 
-        opacity:0.8;
-        border-radius: 25px;
-      }
-      #sobreimg{
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
-      }
-      #divsobre{
-        padding-top: 15px;
-      }
-      #link{
-        text-align: center;
-      }
-      .img-responsive{
-        width: 100%;
-      }
-      p{
-        text-indent: 2em;
-      }
-
-      body{font-family: 'Roboto', sans-serif;
-      }
-      #mama{
-        max-height: 500px;
-        max-width: 634px;
-      }
-      
+      a:hover, a:visited, a:active,a:link { text-decoration: none; }
+      body { font-family: 'Roboto', sans-serif; }
       </style>
   </head>
 
   <body>
     <div id="divsobre" class="col-lg-12" >
       <img id="sobreimg" class="img-responsive" src="<%= asset_path('outRosaPage.png') %>">
-      <h6>Publicado: Quinta, 06 de Outubro de 2016, 15:42</h6>
-      <div id="frametexto"></div>
+      <h6 >Publicado: Quinta, 06 de Outubro de 2016, 15:42</h6>
+      <div id="frameTextoNews"></div>
       <p align="center"><h1>Outubro Rosa 2016</h1></center> <br>
       <h4> <p>
        O movimento popular internacionalmente conhecido como Outubro Rosa é comemorado em todo o mundo. O nome remete à cor do laço rosa que simboliza, mundialmente, a luta contra o câncer de mama e estimula a participação da população, empresas e entidades. Este movimento começou nos Estados Unidos, onde vários Estados tinham ações isoladas referente ao câncer de mama e ou mamografia no mês de outubro, posteriormente com a aprovação do Congresso Americano o mês de Outubro se tornou o mês nacional (americano) de prevenção do câncer de mama.

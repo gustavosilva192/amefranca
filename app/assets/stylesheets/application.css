@@ -118,13 +118,12 @@ nav ul li:hover{
 }
  
 @media(max-width: 1200px) {
- 
-.logo {
-  position: fixed;
-  top: 0;
-  margin-top: 16px;
+  .logo {
+    position: fixed;
+    top: 0;
+    margin-top: 16px;
+  }
 }
-
 nav ul {
   max-height: 0px;
   background-color: rgba(255,255,255, 0.7); 

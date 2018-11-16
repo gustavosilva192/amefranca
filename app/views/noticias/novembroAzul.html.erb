@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <title>Novembro Azul</title>
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= javascript_include_tag "application" %>
+    <style type="text/css">
+      h1 {color: #0641a0; font-weight: bold; text-align: center;}
+      h2 {color: red; font-weight: bold; text-align: center; }
+      h3 {font-weight: bold; font-style:italic }
+      h4 {color: rgb(0,0,0);}
+      h6 {font-weight: italic; color: gray;}
+      #corpo {text-align: justify; text-indent: 2em;}
+      #sub {color: rgb(0,20,100); font-weight: bold; text-align: center;}
+      #texto{
+        background: white;
+        opacity: 0.5;
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-top: 7px;
+        border-radius: 25px;
+      }
+      #frametexto{
+        background-color: white; 
+        position: absolute; 
+        z-index:-1; 
+        top:0; 
+        left:0; 
+        right:0; 
+        bottom:0; 
+        opacity:0.8;
+        border-radius: 25px;
+      }
+      #sobreimg{
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+      }
+      #divsobre{
+        padding-top: 15px;
+      }
+      #link{
+        text-align: center;
+      }
+      .img-responsive{
+        width: 100%;
+      }
+      p{
+        text-indent: 2em;
+      }
+
+      body{font-family: 'Roboto', sans-serif;
+      }
+      #mama{
+        max-height: 500px;
+        max-width: 634px;
+      }
+      
+      </style>
+  </head>
+
+  <body>
+    <div id="divsobre" class="col-lg-12" >
+      <img id="sobreimg" class="img-responsive" src="<%= asset_path('novembroAzulPage.jpg') %>">
+      <h6>Publicado: Segunda, 07 de Novembro de 2016, 10:27</h6>
+      <div id="frametexto"></div>
+      <p align="center" ><h1>Novembro Azul 2016</h1></center> <br>
+      <h4> <p>
+      Novembro Azul é uma campanha de conscientização realizada por diversas entidades no mês de novembro dirigido à sociedade e, em especial, aos homens, para conscientização a respeito de doenças masculinas, com ênfase na prevenção e no diagnóstico precoce do câncer de próstata.
+      </p></h4>
+       <br>
+       <h2>Dúvidas frequentes sobre o câncer de próstata</h2>
+       <h3 align="center">Quais são os exames para detectar a doença? </h3>
+       <h4> <p>
+       A recomendação da Sociedade Brasileira de Urologia (SBU) é que homens a partir de 50 anos procurem seu urologista para discutir a prática e a realização da avaliação. Aqueles com maior risco da doença (história familiar, raça negra) devem procurar o urologista a partir dos 45 anos. Os exames consistem na dosagem sérica do PSA e no exame digital retal, complementares para o diagnóstico, com periodicidade anual.</p><br>
+
+       <h3 align="center">Por que não posso só fazer o exame de sangue? </h3>
+       <h4> <p>
+       Porque cerca de 10 a 20% dos casos não são detectados pela dosagem de PSA no sangue. O exame de toque e o PSA são complementares.</p><br>
+
+       <h3 align="center">Quais são os fatores de risco para o câncer de próstata? </h3>
+       <h4> <p align="center" >
+       - Idade (cerca de 62% dos casos são de homens a partir dos 65 anos) <br>
+       - Histórico familiar<br>
+       - Raça (maior incidência entre os negros)<br>
+       - Alimentação inadequada, à base de gordura animal e deficiente em frutas, verduras, legumes e grãos<br>
+       - Sedentarismo<br>
+       - Obesidade</p><br>
+
+       <h3 align="center">É possível prevenir? </h3>
+       <h4> <p>
+       Evitar a doença, não. Mas é possível diagnosticá-la precocemente, quando as chances de cura são de cerca de 90%.</p><br>
+
+       <h3 align="center">Quais são os sintomas? </h3>
+       <h4> <p>
+       Na fase inicial, quando as chances de cura são maiores, não há qualquer sintoma. Por isso a importância dos exames. Na fase avançada, quando a cura é mais difícil, o paciente pode sentir: vontade de urinar com urgência, dificuldade para urinar e levantar várias vezes à noite para ir ao banheiro, dor óssea, queda do estado geral, insuficiência renal, dores fortes.</p><br>
+
+       <h3 align="center">Quais são as opções de tratamento? </h3>
+       <h4> <p>
+       De acordo com a fase do tumor e as características do paciente, o médico poderá definir quais as melhores formas de tratamento. Nos estágios iniciais da doença (tumores localizados e localmente avançados) a prostatectomia radical é o tratamento padrão. Consiste em uma cirurgia para retirada da próstata e apresenta altos índices de cura. </p><br>
+
+       </p></h4><br>
+      <h6>Fonte: <a href="http://www.padrao.com.br/br/p/271/novembro-azul--campanha-nacional-de-conscientizae-231-e-227-o-sobre-o-ce-226-ncer-de-pre-243-stata.aspx" target="_blank">http://www.padrao.com.br </a>
+  
+      
+    </div>
+  </body>
+  <footer>
+  </footer>
+</html>
+
+
+
+
+
+

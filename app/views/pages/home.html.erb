@@ -10,6 +10,9 @@
   <script src="<%= asset_path('slick.js') %>" type="text/javascript" charset="utf-8"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <!-- Bootstrap JS is not required, but included for the responsive demo navigation and button states -->
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
 
   <style>
 	 	a:hover,
@@ -19,40 +22,61 @@
 	    text-decoration: none;
 	  }
 	  body{font-family: 'Roboto', sans-serif;}
+
+
+
 	</style>
 </head>
 <body>
-	<div id="divsobre" class="col-lg-12">
-		<div id="jumbo">
-			<p id="title">Bem vindo!</p>
-			<div id="sliderbck" >
-			  <section class="autoplay">
-					<div>
-					  <a href="/novembroAzul"> <img class="img-responsive" src="<%= asset_path('CarouselSlide2.jpg') %>" ></a>
-					</div>
-					<div>
-					  <a href="/outubroRosa"> <img class="img-responsive" src="<%= asset_path('outRosa.png') %>" ></a>
-					</div>
-					<div>
-					  <a href="/galery"> <img class="img-responsive" src="<%= asset_path('banner1.jpg') %>" ></a>
-					</div>
-			  </section>
+	<div class="jumbotron" id="jumbo" >
+		<p id="title">Bem vindo!</p>
+		<h4></h4>
+		<div class="container" >
+			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="4500">
+			  <!-- Indicators -->
+			  <ol class="carousel-indicators">
+			    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+			  </ol>
+
+			  <!-- Wrapper for slides (686 × 274 pixels (Natural: 1200 × 480 pixels)) -->
+			  <div class="carousel-inner" role="listbox">
+				  <div class="item active">
+				    <a href="/novembroAzul"> <img class="img-responsive" id="thumbhome" src="<%= asset_path('CarouselSlide2.jpg') %>" >
+				    <div id="divCaption" class="carousel-caption">
+				       <a id="titleCaption" href="/novembroAzul" style="color: white">Novembro Azul</a><br>
+				       Mês de Conscientização a Saúde do Homem!
+				    </div>
+				  </div>
+			    <div class="item">
+			      <a href="/outubroRosa"> <img class="img-responsive" id="thumbhome" src="<%= asset_path('outRosa.png') %>" >
+			      <div id="divCaption" class="carousel-caption">
+			       <a id="titleCaption" href="/outubroRosa" style="color: white">Outubro Rosa</a><br>
+			       A detecção precoce pode salvar sua vida!
+			      </div>
+			    </div>
+			    <div class="item">
+			      <a href="/galery"> <img class="img-responsive" id="thumbhome" src="<%= asset_path('banner1.jpg') %>" >
+			      <div id="divCaption" class="carousel-caption">
+			       <a id="titleCaption" href="/galery" style="color: white">Ame Franca</a><br>
+			       Conheça um pouco da nossa estrutura!
+			      </div>
+			    </div>
+				  
+				</div>
+
+			  <!-- Controls -->
+			  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+			    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			    <span class="sr-only">Previous</span>
+			  </a>
+			  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+			    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			    <span class="sr-only">Next</span>
+			  </a>
 			</div>
-			<br>
 		</div>
 	</div>
-
-
-  <script type="text/javascript">
-	$(document).ready(function(){
-		  $('.autoplay').slick({
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			autoplay: true,
-			autoplaySpeed: 4000,
-		  });
-		});
-</script>
-
 </body>
 </html>

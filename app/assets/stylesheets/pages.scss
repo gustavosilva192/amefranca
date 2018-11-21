@@ -352,3 +352,26 @@ iframe{
   margin-top: 10px;
 
 }
+
+/* Transparency page */
+#textfield{
+  max-width: 500px;
+  max-height: 40px;
+  border-radius: 9px;
+  background-color: rgba(0,0,0,0.2);
+  border-color: transparent;
+}
+#searchBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  width: 400px;
+  height: 400px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: white;
+  border-radius: 10px;
+}

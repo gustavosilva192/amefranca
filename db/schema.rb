@@ -10,10 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_14_170140) do
+ActiveRecord::Schema.define(version: 2018_11_19_114558) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "appwebexemps", force: :cascade do |t|
+    t.string "nome"
+    t.string "id_seq"
+    t.text "endereco"
+    t.decimal "preco"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "colab_salarios", force: :cascade do |t|
+    t.string "name"
+    t.string "estabelecimento"
+    t.string "cargo"
+    t.date "competencia"
+    t.float "provento"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "proventos", force: :cascade do |t|
     t.string "name"
@@ -21,6 +41,26 @@ ActiveRecord::Schema.define(version: 2018_11_14_170140) do
     t.string "cargo"
     t.date "compotencia"
     t.float "provento"
+  end
+
+  create_table "remuneracaos", force: :cascade do |t|
+    t.string "nome"
+    t.string "estabelecimento"
+    t.string "cargo"
+    t.date "competencia"
+    t.decimal "provento"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "transps", force: :cascade do |t|
+    t.string "nome"
+    t.string "estab"
+    t.string "cargo"
+    t.date "competencia"
+    t.decimal "provento"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

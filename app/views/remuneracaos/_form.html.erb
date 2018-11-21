@@ -1,0 +1,42 @@
+<%= form_with(model: remuneracao, local: true) do |form| %>
+  <% if remuneracao.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(remuneracao.errors.count, "error") %> prohibited this remuneracao from being saved:</h2>
+
+      <ul>
+      <% remuneracao.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :estabelecimento %>
+    <%= form.text_field :estabelecimento %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cargo %>
+    <%= form.text_field :cargo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :competencia %>
+    <%= form.date_select :competencia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :provento %>
+    <%= form.text_field :provento %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

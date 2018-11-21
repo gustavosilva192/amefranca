@@ -1,23 +1,35 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Portal da Transparência</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<style>
-	 	a:hover,
-    a:visited,
-    a:active,
-    a:link {
-      text-decoration: none;
-    }
-    body{font-family: 'Roboto', sans-serif;}
-	</style>
-</head>
-<body>
+	<head>
+		<title>Portal da Transparência</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.js" integrity="sha256-PtzTX1ftmEmj8YUiAX0wTIQ+ddTAGVt2MiLMsGsAMxM=" crossorigin="anonymous"></script>
 
-</body>
+		<style>
+		 	a:hover,
+	    a:visited,
+	    a:active,
+	    a:link {
+	      text-decoration: none;
+	    }
+	    body{font-family: 'Roboto', sans-serif;}
+		</style>
+	</head>
+	<body>
+
+		<div id="searchBox" class="container">
+			<div class="box">
+				<h2 id="titulo">Remunerações AME Franca</h2><br>
+			  <form action="/remuneracaos" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+			    <label for="nome">Nome</label>
+			    <input type="text" name="nome" id="textfield" required="required" placeholder="Digite o nome:" class="form-control"><br>
+			    <label for="competencia">Competência</label>
+			    <input type="month" name="competencia" required="required" class="form-control">
+			    <div align="center" id="botao_enviar">
+			      <input type="submit" value="Pesquisa" class="btn btn-primary" data-disable-with="Pesquisa">
+			    </div>
+			  </form>
+			</div>
+		</div>
+	</body>
 </html>
-
-<h1>Pages#transparency</h1>
-<p>Find me in app/views/pages/transparency.html.erb</p>

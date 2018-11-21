@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @remuneracao.nome %>
+</p>
+
+<p>
+  <strong>Estabelecimento:</strong>
+  <%= @remuneracao.estabelecimento %>
+</p>
+
+<p>
+  <strong>Cargo:</strong>
+  <%= @remuneracao.cargo %>
+</p>
+
+<p>
+  <strong>Competencia:</strong>
+  <%= @remuneracao.competencia %>
+</p>
+
+<p>
+  <strong>Provento:</strong>
+  <%= @remuneracao.provento %>
+</p>
+
+<%= link_to 'Edit', edit_remuneracao_path(@remuneracao) %> |
+<%= link_to 'Back', remuneracaos_path %>

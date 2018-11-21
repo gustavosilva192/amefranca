@@ -1,0 +1,43 @@
+<style>
+  a:hover,
+  a:visited,
+  a:active,
+  a:link {
+    text-decoration: none;
+  }
+  body{font-family: 'Roboto', sans-serif;}
+  span{
+    margin-right: 14px
+  }
+</style>
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Estabelecimento</th>
+      <th>Cargo</th>
+      <th>Competencia</th>
+      <th>Provento</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <% for remuneracao in @remuneracaos %>
+        <td><%= remuneracao.nome %></td>
+        <td><%= remuneracao.estabelecimento %></td>
+        <td><%= remuneracao.cargo %></td>
+        <td><%= remuneracao.competencia %></td>
+        <td><%= remuneracao.provento %></td>
+        <td><%= link_to 'Show', remuneracao %></td>
+        <td><%= link_to 'Edit', edit_remuneracao_path(remuneracao) %></td>
+        <td><%= link_to 'Destroy', remuneracao, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Remuneracao', new_remuneracao_path %>

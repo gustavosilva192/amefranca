@@ -29,6 +29,7 @@ development:
   template: template0
   port: 5433
   host: localhost
+  cast: false
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.

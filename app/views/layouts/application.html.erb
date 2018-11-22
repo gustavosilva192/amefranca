@@ -29,7 +29,11 @@
           <li><%= link_to "Notícias", "/news"  %></li>
           <li><a href="http://189.112.5.113/LaboratorioWeb/indexLaboratorio.jsp" target="new">Exames </a></li>
           <li><a href="/contacts/new">Ouvidoria</a></li>
-          <li><%= link_to "Informações ao Paciente", "/infos" %></li>
+          <% if current_user %> 
+            <li class="hvr-bounce-to-top"><%= link_to "Intranet", "/intranet"  %></li>
+          <%else%>
+            <li class="hvr-bounce-to-top"><%= link_to "Informações ao Paciente", "/infos" %></li>
+          <%end%>
           <li><%= link_to "Trabalhe conosco", "/edital" %></li>
           <li><%= link_to "Transparência", "/transparency"  %></li>
         </ul>

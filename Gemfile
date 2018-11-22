@@ -18,6 +18,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'mail_form', '~> 1.7', '>= 1.7.1'
 # Jquery form mask
 gem 'jquery_mask_rails'
+# import csv files
+gem 'activerecord-import'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'

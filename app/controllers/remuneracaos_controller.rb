@@ -27,17 +27,18 @@ class RemuneracaosController < ApplicationController
   # POST /remuneracaos
   # POST /remuneracaos.json
   def create
-    @remuneracao = Remuneracao.new(remuneracao_params)
+    Remuneracao.import(params[:remuneracao][:file])
+    # @remuneracao = Remuneracao.new(remuneracao_params)
 
-    respond_to do |format|
-      if @remuneracao.save
-        format.html { redirect_to @remuneracao, notice: 'Remuneracao was successfully created.' }
-        format.json { render :show, status: :created, location: @remuneracao }
-      else
-        format.html { render :new }
-        format.json { render json: @remuneracao.errors, status: :unprocessable_entity }
-      end
-    end
+    # respond_to do |format|
+    #   if @remuneracao.save
+    #     format.html { redirect_to @remuneracao, notice: 'Remuneracao was successfully created.' }
+    #     format.json { render :show, status: :created, location: @remuneracao }
+    #   else
+    #     format.html { render :new }
+    #     format.json { render json: @remuneracao.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   # PATCH/PUT /remuneracaos/1

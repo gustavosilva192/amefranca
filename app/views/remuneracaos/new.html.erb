@@ -1,5 +1,12 @@
-<h1>New Remuneracao</h1>
-
-<%= render 'form', remuneracao: @remuneracao %>
-
-<%= link_to 'Back', remuneracaos_path %>
+<div>
+	<h1>Remunerações</h1>
+	<%= render 'form', remuneracao: @remuneracao %>
+	<br>
+	<%= form_for @remuneracao, url: remuneracaos_path do |f| %>
+	   <div class="form-group">
+	      <%= f.label :file, "Upload do arquivo .csv" %>
+	      <%= f.file_field :file, class: 'form-control-file', required: true %>
+	   </div>
+	   <%= f.button :submit, class: 'btn btn-primary'  %>
+	<% end %>
+</div>

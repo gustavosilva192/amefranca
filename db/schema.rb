@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_19_114558) do
+ActiveRecord::Schema.define(version: 2018_11_22_143058) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2018_11_19_114558) do
     t.decimal "provento"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["competencia", "nome"], name: "index_remuneracaos_on_competencia_and_nome", unique: true
   end
 
   create_table "transps", force: :cascade do |t|

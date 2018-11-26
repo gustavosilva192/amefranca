@@ -22,11 +22,11 @@ class UsersController < ApplicationController
 			senha = @user.password
 			senhaConfirm = @user.password_confirmation
 			if senha.length < 6 
-				flash.now[:error] = "A senha deve ser maior a 5 caracteres!"
+				flash[:error] = "A senha deve ser maior a 5 caracteres!"
 				render 'new'
 			else
 				if senha != senhaConfirm
-					flash.now[:error] = "Senhas não conferem!"
+					flash[:error] = "Senhas não conferem!"
 					render 'new'
 				else
 					redirect_to '/login', :flash => { :error => "Usuário já cadastrado!"}

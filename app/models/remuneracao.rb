@@ -6,6 +6,7 @@ class Remuneracao < ApplicationRecord
 
   scope :nome, 				-> (name) { where("nome iLIKE ?", "%#{name}%")}
   scope :competencia, -> (comp) { where("competencia = ?", "#{comp}-01")}
+  scope :cargo, 			-> (cargo) { where("cargo iLIKE ?", "%#{cargo}%")}
 
  	def self.import(file)
 		CSV.foreach(file.path, headers: true) do |row|

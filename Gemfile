@@ -20,7 +20,8 @@ gem 'mail_form', '~> 1.7', '>= 1.7.1'
 gem 'jquery_mask_rails'
 # import csv files
 gem 'activerecord-import'
-
+# For Flash notice works
+gem "twitter-bootstrap-rails"
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks

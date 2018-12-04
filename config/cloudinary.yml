@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: hdo8syvgn
+  api_key: '936647158556389'
+  api_secret: 7ycOLO35-H8DjlFA-ibdXdfK2Q8
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: hdo8syvgn
+  api_key: '936647158556389'
+  api_secret: 7ycOLO35-H8DjlFA-ibdXdfK2Q8
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: hdo8syvgn
+  api_key: '936647158556389'
+  api_secret: 7ycOLO35-H8DjlFA-ibdXdfK2Q8
+  enhance_image_tag: true
+  static_image_support: false

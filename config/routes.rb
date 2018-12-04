@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :articles
   resources :remuneracaos
   get 'users/new'
    root 'pages#home'

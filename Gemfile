@@ -32,6 +32,14 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+# For admin manage
+gem 'trestle'
+gem 'trestle-simplemde'
+gem 'redcarpet'
+# Gem Auth admin
+gem 'trestle-auth'
+gem 'carrierwave'
+gem 'cloudinary'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

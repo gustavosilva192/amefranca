@@ -38,8 +38,11 @@ gem 'trestle-simplemde'
 gem 'redcarpet'
 # Gem Auth admin
 gem 'trestle-auth'
+# Image Upload
 gem 'carrierwave'
 gem 'cloudinary'
+# Tiny editor
+gem 'trestle-tinymce'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

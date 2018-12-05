@@ -12,10 +12,14 @@
 	<body>
 
 		<div id="divsobre" class="col-lg-12" >
-		  <h6>Publicado:   <%= @article.updated_at %></h6>
-		  <div id="frameTextoNews"></div>
-		  <img src="<%= @article.imagename %>">
-		  <%= markdown(@article.content) %>
+			<h6>Publicado:   <%= @article.updated_at %></h6>
+      <img id="sobreimg" class="img-responsive" src="<%= @article.imagename %>">
+      <div id="frameTextoNews"></div>
+      <p align="center" ><h1><%= @article.title %></h1></center> <br>
+      <h4><%= markdown(@article.content) %>
+    </div>
+  </body>
+		  
 		</div>
 		<p id="notice"><%= notice %></p>
 

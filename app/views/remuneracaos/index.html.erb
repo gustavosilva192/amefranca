@@ -50,8 +50,8 @@
               <td class="fit"><%= remuneracao.nome %></td>
               <td class="fit"><%= remuneracao.estabelecimento %></td>
               <td class="fit"><%= remuneracao.cargo %></td>
-              <td class="fit"><%= remuneracao.competencia %></td>
-              <td class="fit"><%= remuneracao.provento %></td>
+              <td class="fit"><%= remuneracao.competencia.strftime("%m/%Y") %></td>
+              <td class="fit">R$  <%= '%.2f' % remuneracao.provento %></td>
               <!-- <td><%= link_to 'Show', remuneracao %></td>
               <td><%= link_to 'Edit', edit_remuneracao_path(remuneracao) %></td>
               <td><%= link_to 'Destroy', remuneracao, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->

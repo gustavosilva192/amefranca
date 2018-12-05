@@ -20,7 +20,7 @@ Trestle.resource(:articles) do
       text_field :name
       text_field :title
       # Define custom form fields for easy re-use
-      editor :content
+      tinymce :content
       file_field :imagename
   end
   # form do |article|

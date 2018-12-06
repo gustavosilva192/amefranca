@@ -40,7 +40,7 @@ gem 'redcarpet'
 gem 'trestle-auth'
 # Image Upload
 gem 'carrierwave'
-gem 'cloudinary'
+gem 'cloudinary', '~> 1.10.1.pre.rc'
 # Tiny editor
 gem 'trestle-tinymce'
 

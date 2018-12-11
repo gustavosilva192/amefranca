@@ -71,7 +71,7 @@ class RemuneracaosController < ApplicationController
       @remuneracao = Remuneracao.find(params[:id])
     end
     def filtering_params(params)
-      params.slice(:nome, :competencia, :cargo)
+      params.slice(:nome, :competencia, :estabelecimento, :cargo)
     end
     # Never trust parameters from the scary internet, only allow the white list through.
     def remuneracao_params

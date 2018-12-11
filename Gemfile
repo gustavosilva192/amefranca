@@ -43,7 +43,7 @@ gem 'carrierwave'
 gem 'cloudinary', '~> 1.10.1.pre.rc'
 # Tiny editor
 gem 'trestle-tinymce'
-
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

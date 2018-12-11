@@ -25,9 +25,13 @@
       }
       table.table {
         margin-right: auto;
-        margin-left: auto;
+        margin-left: 80px;
         padding: 0px;
-        max-width: 76%
+      }
+      tbody{
+        margin-right: auto;
+        margin-left: auto;
+        background-color: white;
       }
     </style>
   </head>
@@ -51,7 +55,11 @@
               <td class="fit"><%= remuneracao.estabelecimento %></td>
               <td class="fit"><%= remuneracao.cargo %></td>
               <td class="fit"><%= remuneracao.competencia.strftime("%m/%Y") %></td>
-              <td class="fit">R$  <%= '%.2f' % remuneracao.provento %></td>
+              <% if remuneracao.provento %>
+                <td class="fit">R$  <%= '%.2f' % remuneracao.provento %></td>
+              <%else%>
+                <td class="fit">R$  <%=remuneracao.provento %></td>
+              <%end%>
               <!-- <td><%= link_to 'Show', remuneracao %></td>
               <td><%= link_to 'Edit', edit_remuneracao_path(remuneracao) %></td>
               <td><%= link_to 'Destroy', remuneracao, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->

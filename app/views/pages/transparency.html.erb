@@ -2,8 +2,8 @@
 <html>
 	<head>
 		<title>Portal da Transparência</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.js" integrity="sha256-PtzTX1ftmEmj8YUiAX0wTIQ+ddTAGVt2MiLMsGsAMxM=" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css">
+		
 
 		<style>
 		 	a:hover,
@@ -32,12 +32,23 @@
 			    <input type="text" name="cargo" id="textfield" placeholder="Digite o cargo:" class="form-control"><br>
 			    <label for="competencia">Competência</label>
 			    <input type="month" id=textfield name="competencia" required="required" class="form-control">
+    	    <br>
+
+    	    <div class="form-group">
+	    	    <label>Selecione</label><br>
+	    	    <select id="selectpicker" name="estabelecimento" class="selectpicker" required="required" multiple title="Estabelecimento" data-max-options="1">
+		    	    <option>AME FRANCA</option>
+		    	    <option>AME TAQUARITINGA</option>
+	    	    </select>
+    	    </div>
+
 			    <div align="center" id="botao_enviar">
 			      <input type="submit" value="Pesquisa" class="btn btn-primary" data-disable-with="Pesquisa">
 			    </div>
 			  </form>
 			</div>
 		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script>
 		<script>
 			monthInput.addEventListener('keydown', function(event) {
 		  	if (event.keyIdentifier == "Down") {

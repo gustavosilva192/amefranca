@@ -4,9 +4,10 @@ class Remuneracao < ApplicationRecord
 	require 'activerecord-import/active_record/adapters/postgresql_adapter'
 	validates :competencia, uniqueness: { scope: :nome }
 
-  scope :nome, 				-> (name) { where("nome iLIKE ?", "%#{name}%")}
-  scope :competencia, -> (comp) { where("competencia = ?", "#{comp}-01")}
-  scope :cargo, 			-> (cargo) { where("cargo iLIKE ?", "%#{cargo}%")}
+  scope :nome, 							-> (name) { where("nome iLIKE ?", "%#{name}%")}
+  scope :competencia, 			-> (comp) { where("competencia = ?", "#{comp}-01")}
+  scope :estabelecimento, 	-> (estab) { where("estabelecimento LIKE ?", "#{estab}")}
+  scope :cargo, 						-> (cargo) { where("cargo iLIKE ?", "%#{cargo}%")}
 
  	def self.import(file)
 		CSV.foreach(file.path, headers: true) do |row|

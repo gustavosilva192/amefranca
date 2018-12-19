@@ -27,7 +27,7 @@ class RemuneracaosController < ApplicationController
   # POST /remuneracaos
   # POST /remuneracaos.json
   def create
-    Remuneracao.import(params[:remuneracao][:file])
+      Remuneracao.import(params[:remuneracao][:file])
     # @remuneracao = Remuneracao.new(remuneracao_params)
 
     # respond_to do |format|

@@ -2,7 +2,7 @@ class Remuneracao < ApplicationRecord
 	require 'csv'
 	require 'activerecord-import/base'
 	require 'activerecord-import/active_record/adapters/postgresql_adapter'
-	validates :competencia, uniqueness: { scope: :nome }
+	validates :competencia, uniqueness: { scope: [:nome, :estabelecimento] }
 
   scope :nome, 							-> (name) { where("nome iLIKE ?", "%#{name}%")}
   scope :competencia, 			-> (comp) { where("competencia = ?", "#{comp}-01")}

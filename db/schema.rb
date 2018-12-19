@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_04_170333) do
+ActiveRecord::Schema.define(version: 2018_12_19_095010) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,31 +26,11 @@ ActiveRecord::Schema.define(version: 2018_12_04_170333) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "appwebexemps", force: :cascade do |t|
-    t.string "nome"
-    t.string "id_seq"
-    t.text "endereco"
-    t.decimal "preco"
-    t.string "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "articles", force: :cascade do |t|
     t.string "name"
     t.string "title"
     t.text "content"
     t.string "imagename"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "colab_salarios", force: :cascade do |t|
-    t.string "name"
-    t.string "estabelecimento"
-    t.string "cargo"
-    t.date "competencia"
-    t.float "provento"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -71,17 +51,7 @@ ActiveRecord::Schema.define(version: 2018_12_04_170333) do
     t.decimal "provento"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["competencia", "nome"], name: "index_remuneracaos_on_competencia_and_nome", unique: true
-  end
-
-  create_table "transps", force: :cascade do |t|
-    t.string "nome"
-    t.string "estab"
-    t.string "cargo"
-    t.date "competencia"
-    t.decimal "provento"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.index ["competencia", "nome", "estabelecimento"], name: "index_remuneracaos_on_competencia_and_nome_and_estabelecimento", unique: true
   end
 
   create_table "users", force: :cascade do |t|

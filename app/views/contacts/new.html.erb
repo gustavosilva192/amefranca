@@ -12,56 +12,59 @@
 	    	text-decoration: none;
 	    }
 	    body{font-family: 'Roboto', sans-serif;}
-			span{
-				margin-right: 14px
-			}
      	</style>
 	</head> 
 
 	<body> 
 		<p> <font id="titulo" > Este é o nosso canal de contato! </font> </p> 
-	    <div>
-	        <div class="col-md-6"> 
-	        	<div id="Contato">  </div>
-		        <fieldset>
-		        	<legend>Elogie, reclame, sugira! <br> O AME Franca ouve você!</legend>
-			       	<%= form_for @contact do |f| %>
-								<%= f.label :nome %><br>
-								<%= f.text_field :name, required: true, class: "form-control input-md" %>
+		<div class="container">
+		  <div class="row">
+		    <div id="formContact" class="col">
+		      <legend id="legendContact" > Elogie, reclame, sugira! <br> O AME Franca ouve você!</legend>
+		      <form class="new_contact" id="new_contact" action="/contacts" accept-charset="UTF-8" method="post">
+		      	<input name="utf8" type="hidden" value="✓">
+		      	<input type="hidden" name="authenticity_token" value="/713BlA8k3kJchU59De/bVyCW7W/UXsUQC3iTyShIpgmQj0jUcCFKkEpYG8YDBY7LETR64S8nygQ3Ss6W3cLtA==">
 
-								<br>
-								<%= f.label :telefone %><br>
-								<%= f.text_field :telefone, class: "form-control input-md" %>
+						<label for="contact_nome">Nome</label><br>
+						<input required="required" class="form-control input-md" type="text" name="contact[name]" id="contact_name">
 
-								<br>
-								<%= f.label :mensagem %><br>
-								<%= f.text_area :message, as: :text, class: "form-control" %>
+						<br>
+						<label for="contact_telefone">Telefone</label><br>
+						<input class="form-control input-md" type="text" name="contact[telefone]" id="contact_telefone">
 
-								<div class="hidden">
-									<%= f.label :nickname %><br>
-									<%= f.text_field :nickname, hint: 'leave this field blank' %>
-								</div>
-								<br>
-								<%= f.label :tipo, 'Selecione o motivo de seu contato:' %> <br>
-							    <%= f.radio_button :tipo, 'Elogios', :checked => true %> Elogios <span></span>  
-							    <%= f.radio_button :tipo, 'Reclamações' %> Reclamações <span></span>
-							    <%= f.radio_button :tipo, 'Sugestões' %> Sugestões <span></span>
-							    <%= f.radio_button :tipo, 'Informações' %> Informações <span></span>
-							    <%= f.radio_button :tipo, 'Agradecimentos' %> Agradecimentos <br>
-								<div align="center" id="botao_enviar">
-									<%= f.submit 'Enviar', class: "btn btn-primary"%>
-								</div>
-							<% end %>
-					<br>
-					<h4 align="center" id="fone" > (16) 3707-4400	</h4>
-					<h4 align="center"> Rua Dr. Alcindo Ribeiro Conrado, 1395 - Centro <br> Franca - SP - CEP: 14400-350 <br> </h4>
-		        </fieldset>
+						<br>
+						<label for="contact_mensagem">Mensagem</label><br>
+						<textarea as="text" class="form-control" name="contact[message]" id="contact_message"></textarea>
+
+						<div hidden="">
+							<label for="contact_nickname">Nickname</label><br>
+							<input hint="leave this field blank" type="text" name="contact[nickname]" id="contact_nickname">
+						</div>
+						<br>
+	    	    <div class="form-group">
+	  	        <label for="contact_tipo">Selecione o motivo de seu contato:</label>
+	  	        <select class="form-control" required="required" name="contact_tipo" id="contact_tipo">
+	  	        	<option disabled selected value> Selecione uma opção </option>
+	  	          <option>Elogio</option>
+	  	          <option>Reclamação</option>
+	  	          <option>Sugestão</option>
+	  	          <option>Informação</option>
+	  	          <option>Reclamação</option>
+	  	        </select>
+	    	    </div>
+						<div align="center" id="botao_enviar">
+							<input type="submit" name="commit" value="Enviar" class="btn btn-primary" data-disable-with="Enviar">
+						</div>
+					</form><br>
+					<h5 align="center" id="fone" > (16) 3707-4400	</h5>
+					<h5 align="center"> Rua Dr. Alcindo Ribeiro Conrado, 1395 - Centro <br> Franca - SP - CEP: 14400-350 <br> </h5>
 		    </div>
-	    </div>
-	    <div class="col-md-2" >
-		    	<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d1868.081171918692!2d-47.40372847263729!3d-20.54053748353611!3m2!1i1024!2i768!4f13.1!4m8!3e0!4m0!4m5!1s0x94b0a62ef6477213%3A0x83b1fc2c10e85e12!2sAME+de+Franca+-+Rua+Doutor+Alcindo+Ribeiro+Conrado%2C+1395+-+Centro%2C+Franca+-+SP%2C+14400-350%2C+Brasil!3m2!1d-20.5407701!2d-47.4034416!5e0!3m2!1spt-BR!2sbr!4v1445340969752" width="500" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
-
-		    	<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d1868.081171918692!2d-47.40372847263729!3d-20.54053748353611!3m2!1i1024!2i768!4f13.1!4m8!3e0!4m0!4m5!1s0x94b0a62ef6477213%3A0x83b1fc2c10e85e12!2sAME+de+Franca+-+Rua+Doutor+Alcindo+Ribeiro+Conrado%2C+1395+-+Centro%2C+Franca+-+SP%2C+14400-350%2C+Brasil!3m2!1d-20.5407701!2d-47.4034416!5e0!3m2!1spt-BR!2sbr!4v1445340969752" width="500" height="300" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+		    <div class="col">
+		      <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d1868.081171918692!2d-47.40372847263729!3d-20.54053748353611!3m2!1i1024!2i768!4f13.1!4m8!3e0!4m0!4m5!1s0x94b0a62ef6477213%3A0x83b1fc2c10e85e12!2sAME+de+Franca+-+Rua+Doutor+Alcindo+Ribeiro+Conrado%2C+1395+-+Centro%2C+Franca+-+SP%2C+14400-350%2C+Brasil!3m2!1d-20.5407701!2d-47.4034416!5e0!3m2!1spt-BR!2sbr!4v1445340969752" frameborder="0" style="border:0" allowfullscreen></iframe>
+		    </div>
+		  </div>
+		</div>
+    	<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d1868.081171918692!2d-47.40372847263729!3d-20.54053748353611!3m2!1i1024!2i768!4f13.1!4m8!3e0!4m0!4m5!1s0x94b0a62ef6477213%3A0x83b1fc2c10e85e12!2sAME+de+Franca+-+Rua+Doutor+Alcindo+Ribeiro+Conrado%2C+1395+-+Centro%2C+Franca+-+SP%2C+14400-350%2C+Brasil!3m2!1d-20.5407701!2d-47.4034416!5e0!3m2!1spt-BR!2sbr!4v1445340969752" width="500" height="300" frameborder="0" style="border:0" allowfullscreen></iframe> -->
 		</div>
 	</body> 
 

@@ -2,9 +2,6 @@
 <html>
 	<head>
 		<title>Portal da Transparência</title>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css">
-		
-
 		<style>
 		 	a:hover,
 	    a:visited,
@@ -25,7 +22,8 @@
 		<div id="searchBox" class="container">
 			<div class="box">
 				<h2 id="titulo">Remunerações AME Franca</h2><br>
-			  <form action="/remuneracaos" autocomplete="off" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+			  <form action="/remuneracaos" autocomplete="off" accept-charset="UTF-8" method="get">
+			  	<input name="utf8" type="hidden" value="✓">
 			    <label for="nome">Nome</label>
 			    <input type="text" name="nome" id="textfield" required="required" minlength="6" placeholder="Digite o nome:" class="form-control"><br>
 			    <label for="Cargo">Cargo</label>
@@ -33,22 +31,20 @@
 			    <label for="competencia">Competência</label>
 			    <input type="month" id=textfield name="competencia" required="required" class="form-control">
     	    <br>
-
     	    <div class="form-group">
-	    	    <label>Selecione</label><br>
-	    	    <select id="selectpicker" name="estabelecimento" class="selectpicker" required="required" multiple title="Estabelecimento" data-max-options="1">
-		    	    <option>AME FRANCA</option>
-		    	    <option>AME TAQUARITINGA</option>
-	    	    </select>
+  	        <label for="estabelecimento">Estabelecimento</label>
+  	        <select class="form-control" required="required" name="estabelecimento" id="estabelecimento">
+  	        	<option disabled selected value> Selecione uma opção </option>
+  	          <option>AME FRANCA</option>
+  	          <option>AME TAQUARITINGA</option>
+  	        </select>
     	    </div>
-
 			    <div align="center" id="botao_enviar">
 			      <input type="submit" value="Buscar" class="btn btn-primary" data-disable-with="Search" >
 			    </div>
 			  </form>
 			</div>
 		</div>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script>
 		<script>
 			monthInput.addEventListener('keydown', function(event) {
 		  	if (event.keyIdentifier == "Down") {

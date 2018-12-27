@@ -22,7 +22,7 @@
 	<body onmouseover="function()">
 		<div class="col-lg-12" id="outter">
 			<div id="backgroundTransparentIntra"></div>
-			<h2>Bem vindo(a) <%= current_user.first_name %></h2>
+			<h3>Bem vindo(a) <%= current_user.first_name %></h3>
 
 			<div id="mural" >
 				<h3 id="muralTitle" style="color: white" >Mural AME</h3>
@@ -38,14 +38,14 @@
 				  <div class="modal-content">
 				    <div class="modal-header">
 				      <button type="button" class="close" data-dismiss="modal">&times;</button>
-				      <h4 id="sobreposto" class="modal-title">Parabéns aos aniversariantes do mês de setembro</h4> <!-- <h4 id="mes"> --></h4> 
+				      <h6 id="sobreposto" class="modal-title">Parabéns aos aniversariantes do mês de setembro</h4> <!-- <h4 id="mes"> --></h6> 
 				    </div>
 				    <div class="modal-body" >
 				    	<div class="col-md-12" id="divAniversario">
-	      					<h4 id="aniversariantes"> 
+	      					<h6 id="aniversariantes"> 
 	      						<!-- Aqui vai o nome dos aniversariantes -->
 	      						Gustavo Henrique da Silva <br>
-	      					</h4> 
+	      					</h6> 
 	      					<img id="birthday" class="img-thumbnail" src="<%= asset_path('aniversario.jpg') %>">
 	      				</div>
 				    </div>
@@ -57,49 +57,56 @@
 			</div>
 			<!-- Ícones da intranet -->
 			<div class="container-fluid">
-			<a style="display:block" href="/comissoes" target="iframe_a">
-				<div class="col-sm-1" id="qualidade">
-					<i class="fa fa-users fa-4x" id="iconIntra" aria-hidden="true"></i>
-					<br><br><br><p></p>
-					<h6 id="titleSmall" >Comissões</h6>
+				<div class="row">
+					<div id="divIcon" class="col-sm-1">
+						<a style="display:block" href="/comissoes" target="iframe_a">
+							<div class="col" id="qualidade" align="center">
+								<i class="fa fa-users fa-4x" id="iconIntra" aria-hidden="true"></i>
+								<h6 id="titleSmall" >Comissões</h6>
+							</div>
+						</a>
+					</div>
+					<div id="divIcon" class="col-sm-1">
+						<a style="display:block" href="/compras" target="iframe_a">
+						<div class="col" id="qualidade" align="center">
+							<i class="fa fa-shopping-cart fa-4x" id="iconIntra" aria-hidden="true"></i>
+							<h6 id="titleSmall" >Compras</h6>
+						</div>
+						</a>
+					</div>
+					<div id="divIcon" class="col-sm-1">
+						<a style="display:block" href="/humanizacao" target="iframe_a">
+						<div class="col" id="qualidade" align="center">
+							<i class="fa fa-heartbeat fa-4x" id="iconIntra" aria-hidden="true"></i>
+							<h6 id="titleSmall" >Humanização</h6>
+						</div>
+						</a>
+					</div>
+					<div id="divIcon" class="col-sm-1">
+						<a style="display:block" href="/patrimonio" target="iframe_a">
+						<div class="col" id="qualidade" align="center">
+							<i class="fa fa-university fa-4x" id="iconIntra" aria-hidden="true"></i>
+							<h6 id="titleSmall" >Patrimônio</h6>
+						</div>
+						</a>
+					</div>
+					<div id="divIcon" class="col-sm-1">
+						<a style="display:block" href="/qualidade" target="iframe_a">
+						<div class="col" id="qualidade" align="center">
+							<i class="fa fa-bar-chart fa-4x" id="iconIntra" aria-hidden="true"></i>
+							<h6 id="titleSmall" >Qualidade</h6>
+						</div>
+						</a>
+					</div>
+					<div id="divIcon" class="col-sm-1">
+						<a style="display:block" href="/treinamentos" target="iframe_a">
+						<div class="col" id="qualidade" align="center">
+							<i class="fa fa-book fa-4x" id="iconIntra" aria-hidden="true"></i>
+							<h6 id="titleSmall" >Treinamentos</h6>
+						</div>
+						</a>
+					</div>
 				</div>
-			</a>
-				<a style="display:block" href="/compras" target="iframe_a">
-				<div class="col-sm-1" id="qualidade">
-					<i class="fa fa-shopping-cart fa-4x" id="iconIntra" aria-hidden="true"></i>
-					<br><br><br><p></p>
-					<h6 id="titleSmall" >Compras</h6>
-				</div>
-				</a>
-				<a style="display:block" href="/humanizacao" target="iframe_a">
-				<div class="col-sm-1" id="qualidade">
-					<i class="fa fa-heartbeat fa-4x" id="iconIntra" aria-hidden="true"></i>
-					<br><br><br><p></p>
-					<h6 id="titleSmall" >Humanização</h6>
-				</div>
-				</a>
-				<a style="display:block" href="/patrimonio" target="iframe_a">
-				<div class="col-sm-1" id="qualidade">
-					<i class="fa fa-university fa-4x" id="iconIntra" aria-hidden="true"></i>
-					<br><br><br><p></p>
-					<h6 id="titleSmall" >Patrimônio</h6>
-				</div>
-				</a>
-				<a style="display:block" href="/qualidade" target="iframe_a">
-				<div class="col-sm-1" id="qualidade">
-					<i class="fa fa-bar-chart fa-4x" id="iconIntra" aria-hidden="true"></i>
-					<br><br><br><p></p>
-					<h6 id="titleSmall" >Qualidade</h6>
-				</div>
-				</a>
-				<a style="display:block" href="/treinamentos" target="iframe_a">
-				<div class="col-sm-1" id="qualidade">
-					<i class="fa fa-book fa-4x" id="iconIntra" aria-hidden="true"></i>
-					<br><br><br><p></p>
-					<h6 id="titleSmall" >Treinamentos</h6>
-				</div>
-				</a>
-			</div>
 			<div class="intrinsic-container" id="containerFrame">
 			  <iframe class="col-sm-12" frameborder="0" allowTransparency="true" seamless id="frameIntra" name="iframe_a"></iframe>
 			</div>

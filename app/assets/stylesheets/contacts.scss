@@ -1,3 +1,45 @@
 // Place all the styles related to the contacts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+ #texto{
+  background: gray;
+  opacity: 0.8;
+  font-size: 48px;
+  padding-left: 20px;
+  padding-top: 7px;
+  border-radius: 15px;
+}
+#legendContact{
+	text-align: center;
+	font-weight: bold;
+}
+#formContact{
+	background-color: rgba(255,255,255,0.6);
+	border-radius: 20px;
+}
+#sau{
+  margin-left: 10px;
+  border-radius: 25px;
+}
+
+#fone{
+  font-weight: bold;
+  font-size: 17pt;
+}
+#titulo{
+  font-weight: bold;
+  color: #001464;
+  font-size: 17pt;
+}
+#botao_enviar{
+  margin-top: 25px
+}
+
+#map{
+  margin-top: 5px;
+  max-width: 500; 
+  max-height: 400;
+}
+.form-check-input{
+	margin-left: 30px;
+}

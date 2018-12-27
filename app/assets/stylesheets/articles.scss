@@ -22,3 +22,21 @@ th{
 td{
 	font-size: 12pt;
 }
+#btnsearcharticle{
+	color: white;
+	font-size: 11pt;
+	border-radius: 0px 4px 4px 0px;
+	border-color: transparent;
+}
+#textSearchArticle{
+	max-width: 600px;
+}
+#divSearchArticle{
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+#btnVoltar{
+	margin-top: 20px;
+}

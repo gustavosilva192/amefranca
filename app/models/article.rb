@@ -5,9 +5,14 @@ class Article < ApplicationRecord
 	      Redcarpet::Markdown.new(Redcarpet::Render::HTML)
 	    end
 	  end
-	  def assign_markdown_content
-    	assign_attributes({
-      markdown_content: self.class.markdown.render(content)
-    })
+
+	def self.search(search)
+		where("name iLIKE ?", "%#{search}%")
+	end
+
+  def assign_markdown_content
+  	assign_attributes({
+    	markdown_content: self.class.markdown.render(content)
+  	})
   end
 end

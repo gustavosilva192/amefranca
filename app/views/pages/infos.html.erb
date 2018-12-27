@@ -3,414 +3,454 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Informações ao Paciente</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 		<style>
 			h1 {color: rgb(0,20,100); font-weight: bold; text-align: center;}
 			h2 {color: rgb(200,0,55); text-align: center; }
-			h3 {color: rgb(200,0,55); text-align: center; font-size: 10px; font-weight: bold; }
+			h3 {color: rgb(200,0,55); text-align: center; font-weight: bold; }
 			h4 {color: rgb(0,0,0); text-align: center; font-weight: bold;}
 			h5 {text-align: center; font-size: 16px; color: black; line-height: 1.5}
 			a:hover, a:visited, a:active, a:link { text-decoration: none;}
     	body{font-family: 'Roboto', sans-serif;}
+    	.mb-0 > a {
+    	  display: block;
+    	  position: relative;
+    	}
+    	.mb-0 > a:after {
+    	  content: "\f078"; /* fa-chevron-down */
+    	  font-family: 'FontAwesome';
+    	  position: absolute;
+    	  right: 0;
+    	}
+    	.mb-0 > a[aria-expanded="true"]:after {
+    	  content: "\f077"; /* fa-chevron-up */
+    	}
    	</style>
-
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-		<!-- Bootstrap JS is not required, but included for the responsive demo navigation and button states -->
-		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
 
 	</head>
 
 	<body>
 		<div id="divsobre" class="col-lg-12" >
 			<div id="frametexto"></div>
-	        <p><h2>Orientações ao Usuário </h2></p></center>
-			<div class="bs-example">
-			    <div class="panel-group" id="accordion">
-			        <div class="panel panel-default">
-			            <div class="panel-heading" id="heading">
-			                <h3 class="panel-title">
-			                    <a data-toggle="collapse" style="display:block" data-parent="#accordion" href="#collapseOne">Agendamento de consultas e exames</a>
-			                </h3>
-			            </div>
-			            <div id="collapseOne" class="panel-collapse collapse in">
-			                <div class="panel-body">
-			                    <p id="corpoq">Para realizar exames e consultas nos Ambulatórios Médicos de Especialidades é necessário, antes, consultar com clínico geral em uma Unidade Básica de Saúde. O encaminhamento médico só pode ser feito pela rede pública. O médico vai fornecer uma Guia de Referência(encaminhamento) e a própria unidade de saúde irá marcar a data do atendimento junto ao AME.
-			                    </p>
-			                    <p id="corpoq" >No dia da consulta/Exame/Procedimento chegue com a antecedência solicitada no comprovante de agendamento(Filipeta) entregue pela unidade de saúde que vem descrita a data do agendamento, o horário e protocolo de preparo. É o tempo necessário para que a recepção confira seus dados e a pré consulta de enfermagem. Não se esqueça de levar o cartão do SUS, documento de identificação RG e CPF, além de um comprovante de residência.</p>
-			                </div>
-			            </div>
-			        </div>
-			        <div class="panel panel-default">
-			            <div class="panel-heading" id="heading">
-			                <h3 class="panel-title">
-			                    <a data-toggle="collapse" style="display:block" data-parent="#accordion" href="#collapseTwo">Remarcação de consultas e exames</a>
-			                </h3>
-			            </div>
-			            <div id="collapseTwo" class="panel-collapse collapse">
-			                <div class="panel-body">
-			                    <p id="corpoq">Cada consulta ou exame agendado e que o paciente não comparece, gera um custo para o governo e impossibilita que mais pessoas sejam atendidas, portanto não falte a uma consulta ou exame.</p>
-			                    <p id="corpoq">Caso não seja possível comparecer à consulta ou exame agendado, comunique o AME no telefone 3707-4400 opção(4) com no mínimo 48h de antecedência, para que a sua vaga seja disponibilizada a outro paciente.</p>
-			                    <p id="corpoq">Em caso de falta na primeira consulta da especialidade, para marcar uma nova data será necessário passar novamente por consulta no posto de saúde para obter um novo encaminhamento médico.
-			                    No caso de reagendamento de retorno, vir pessoalmente ao Ame com o informe de atendimento entregue no dia da consulta.</p>
-			                </div>
-			            </div>
-			        </div>
-			        <br>
-			        <p><h2>Perguntas Frequentes </h2></p></center>
-			        <div class="panel panel-default">
-			            <div class="panel-heading" id="heading">
-			                <h3 class="panel-title">
-			                    <a data-toggle="collapse" style="display:block" data-parent="#accordion" href="#collapseThree">As consultas e exames no AME são pagas?</a>
-			                </h3>
-			            </div>
-			            <div id="collapseThree" class="panel-collapse collapse">
-			                <div class="panel-body">
-			                    <p id="corpoq">As consultas e exames realizados pelo AME são feitas através do Sistema Único de Saúde (SUS), portanto não há custo aos pacientes por nenhum procedimento realizado no ambulatório.</p>
-			                </div>
-			            </div>
-			        </div>
-			        <div class="panel panel-default">
-			            <div class="panel-heading" id="heading">
-			                <h3 class="panel-title">
-			                    <a data-toggle="collapse" style="display:block" data-parent="#accordion" href="#collapseFour">Posso realizar os exames solicitados pelo meu médico do plano de saúde no AME?</a>
-			                </h3>
-			            </div>
-			            <div id="collapseFour" class="panel-collapse collapse">
-			                <div class="panel-body">
-			                    <p id="corpoq">O AME somente realiza exames solicitados por médicos da rede pública, os do próprio AME e em alguns casos pelos postos de saúde.</p>
-			                </div>
-			            </div>
-			        </div>
-			        <div class="panel panel-default">
-			            <div class="panel-heading" id="heading">
-			                <h3 class="panel-title">
-			                    <a data-toggle="collapse" style="display:block" data-parent="#accordion" href="#collapseFive">Minha consulta médica foi agendada. Preciso chegar cedo para pegar senha?</a>
-			                </h3>
-			            </div>
-			            <div id="collapseFive" class="panel-collapse collapse">
-			                <div class="panel-body">
-			                    <p id="corpoq">Não é necessário, pois cada paciente tem o seu horário agendado de chegada e atendimento.</p>
-			                </div>
-			            </div>
-			        </div>
-			        <div class="panel panel-default">
-			            <div class="panel-heading" id="heading">
-			                <h3 class="panel-title">
-			                    <a data-toggle="collapse" style="display:block" data-parent="#accordion" href="#collapseSix">Não tenho cartão do SUS. Posso agendar uma consulta e fazer o cartão quando chegar no AME para ser consultado?</a>
-			                </h3>
-			            </div>
-			            <div id="collapseSix" class="panel-collapse collapse">
-			                <div class="panel-body">
-			                    <p id="corpoq">Não é possível agendar uma consulta ou realizar um exame para um paciente sem o número do cartão do SUS. Para saber como é feito o cartão SUS, entre em contato com a Secretaria da Saúde de sua cidade.</p>
-			                </div>
-			            </div>
-			        </div>
-			        <div class="panel panel-default">
-			            <div class="panel-heading" id="heading">
-			                <h3 class="panel-title">
-			                    <a data-toggle="collapse" style="display:block" data-parent="#accordion" href="#collapseSeven">Quando o médico pedir um exame que não é feito no AME da minha região, terei que pagar para fazê-lo?</a>
-			                </h3>
-			            </div>
-			            <div id="collapseSeven" class="panel-collapse collapse">
-			                <div class="panel-body">
-			                    <p id="corpoq"> Quando o exame não for realizado no Ame, o paciente será instruído onde ele deverá levar seu pedido e para alguns exames/consultas a Assistente Social o atenderá e se encarregará do agendamento e aviso da data. </p>
-			                </div>
-			            </div>
-			        </div>
-			        <br>
-			        <p><h2>Preparos de exames e procedimentos cirúrgicos</h2></p></center>
-			        <div class="panel panel-default">
-			            <div class="panel-heading" id="heading">
-			                <h3 class="panel-title">
-			                    <a data-toggle="collapse" style="display:block" data-parent="#accordion" href="#collapseSeventeen">Amigdalectomia</a>
-			                </h3>
-			            </div>
-			            <div id="collapseSeventeen" class="panel-collapse collapse">
-		                <div class="panel-body">
-	                    <p id="corpoq">
-	                    	<h4> Preparos</h4>
-	                    	<h5> Jejum a partir das 23:00 horas; <br>
-												Vir de banho tomado; <br>
-												Obrigatório trazer o rg,caso contrario terá que buscar em casa ou cancelar o procedimento. </h5>
+	        <p><h3>Orientações ao Usuário </h3></p></center>
+				<div id="accordion">
+					<div class="card">
+				    <div class="card-header" id="heading-1">
+				      <h5 class="mb-0">
+				        <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+				          Agendamento de consultas e exames
+				        </a>
+				      </h5>
+				    </div>
+				    <div id="collapse-1" class="collapse" data-parent="#accordion" aria-labelledby="heading-1">
+				      <div class="card-body">
+				        <p id="corpoq">Para realizar exames e consultas nos Ambulatórios Médicos de Especialidades é necessário, antes, consultar com clínico geral em uma Unidade Básica de Saúde. O encaminhamento médico só pode ser feito pela rede pública. O médico vai fornecer uma Guia de Referência(encaminhamento) e a própria unidade de saúde irá marcar a data do atendimento junto ao AME.
+                </p>
+                <p id="corpoq" >No dia da consulta/Exame/Procedimento chegue com a antecedência solicitada no comprovante de agendamento(Filipeta) entregue pela unidade de saúde que vem descrita a data do agendamento, o horário e protocolo de preparo. É o tempo necessário para que a recepção confira seus dados e a pré consulta de enfermagem. Não se esqueça de levar o cartão do SUS, documento de identificação RG e CPF, além de um comprovante de residência.</p>
+				      </div>
+				    </div>
+					</div>
+					<div class="card">
+				    <div class="card-header" id="heading-2">
+				      <h5 class="mb-0">
+				        <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+				          Remarcação de consultas e exames
+				        </a>
+				      </h5>
+				    </div>
+				    <div id="collapse-2" class="collapse" data-parent="#accordion" aria-labelledby="heading-2">
+				      <div class="card-body">
+				        <p id="corpoq">Cada consulta ou exame agendado e que o paciente não comparece, gera um custo para o governo e impossibilita que mais pessoas sejam atendidas, portanto não falte a uma consulta ou exame.</p>
+                <p id="corpoq">Caso não seja possível comparecer à consulta ou exame agendado, comunique o AME no telefone 3707-4400 opção(4) com no mínimo 48h de antecedência, para que a sua vaga seja disponibilizada a outro paciente.</p>
+                <p id="corpoq">Em caso de falta na primeira consulta da especialidade, para marcar uma nova data será necessário passar novamente por consulta no posto de saúde para obter um novo encaminhamento médico.
+                No caso de reagendamento de retorno, vir pessoalmente ao Ame com o informe de atendimento entregue no dia da consulta.</p>
+				      </div>
+				    </div>
+					</div>
+					<p><h3>Perguntas Frequentes </h3></p></center>
+					<div class="card">
+				    <div class="card-header" id="heading-3">
+				      <h5 class="mb-0">
+				        <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+				          As consultas e exames no AME são pagas?
+				        </a>
+				      </h5>
+				    </div>
+				    <div id="collapse-3" class="collapse" data-parent="#accordion" aria-labelledby="heading-3">
+				      <div class="card-body">
+				        <p id="corpoq">As consultas e exames realizados pelo AME são feitas através do Sistema Único de Saúde (SUS), portanto não há custo aos pacientes por nenhum procedimento realizado no ambulatório.</p>
+				      </div>
+				    </div>
+					</div>
+					<div class="card">
+				    <div class="card-header" id="heading-4">
+				      <h5 class="mb-0">
+				        <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-4" aria-expanded="false" aria-controls="collapse-4">
+				          Posso realizar os exames solicitados pelo meu médico do plano de saúde no AME?
+				        </a>
+				      </h5>
+				    </div>
+				    <div id="collapse-4" class="collapse" data-parent="#accordion" aria-labelledby="heading-4">
+				      <div class="card-body">
+				        <p id="corpoq">O AME somente realiza exames solicitados por médicos da rede pública, os do próprio AME e em alguns casos pelos postos de saúde.</p>
+				      </div>
+				    </div>
+					</div>
+					<div class="card">
+				    <div class="card-header" id="heading-5">
+				      <h5 class="mb-0">
+				        <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-5" aria-expanded="false" aria-controls="collapse-5">
+				          Minha consulta médica foi agendada. Preciso chegar cedo para pegar senha?
+				        </a>
+				      </h5>
+				    </div>
+				    <div id="collapse-5" class="collapse" data-parent="#accordion" aria-labelledby="heading-5">
+				      <div class="card-body">
+				        <p id="corpoq">Não é necessário, pois cada paciente tem o seu horário agendado de chegada e atendimento.</p>
+				      </div>
+				    </div>
+					</div>
+					<div class="card">
+				    <div class="card-header" id="heading-6">
+				      <h5 class="mb-0">
+				        <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-6" aria-expanded="false" aria-controls="collapse-6">
+				          Não tenho cartão do SUS. Posso agendar uma consulta e fazer o cartão quando chegar no AME para ser consultado?
+				        </a>
+				      </h5>
+				    </div>
+				    <div id="collapse-6" class="collapse" data-parent="#accordion" aria-labelledby="heading-6">
+				      <div class="card-body">
+				        <p id="corpoq">Não é possível agendar uma consulta ou realizar um exame para um paciente sem o número do cartão do SUS. Para saber como é feito o cartão SUS, entre em contato com a Secretaria da Saúde de sua cidade.</p>
+				      </div>
+				    </div>
+					</div>
+					<div class="card">
+				    <div class="card-header" id="heading-7">
+				      <h5 class="mb-0">
+				        <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-7" aria-expanded="false" aria-controls="collapse-7">
+				          Quando o médico pedir um exame que não é feito no AME da minha região, terei que pagar para fazê-lo?
+				        </a>
+				      </h5>
+				    </div>
+				    <div id="collapse-7" class="collapse" data-parent="#accordion" aria-labelledby="heading-7">
+				      <div class="card-body">
+				        <p id="corpoq"> Quando o exame não for realizado no Ame, o paciente será instruído onde ele deverá levar seu pedido e para alguns exames/consultas a Assistente Social o atenderá e se encarregará do agendamento e aviso da data. </p>
+				      </div>
+				    </div>
+					</div>
+					<p><h3>Preparos de exames e procedimentos cirúrgicos</h3></p></center>
+					<div class="card">
+				    <div class="card-header" id="heading-8">
+				      <h5 class="mb-0">
+				        <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-8" aria-expanded="false" aria-controls="collapse-8">
+				          Amigdalectomia
+				        </a>
+				      </h5>
+				    </div>
+				    <div id="collapse-8" class="collapse" data-parent="#accordion" aria-labelledby="heading-8">
+				      <div class="card-body">
+				        <p id="corpoq">
+	              	<h4> Preparos</h4>
+	              	<h5> Jejum a partir das 23:00 horas; <br>
+									Vir de banho tomado; <br>
+									Obrigatório trazer o rg,caso contrario terá que buscar em casa ou cancelar o procedimento. </h5>
 
-	                    	<h4> Orientação</h4>
-	                    	<h5> Caso o paciente apresentar tosse, coriza (nariz escorrendo), febre,infeção de garganta ou outros sinais de gripe entrar em contato com ame (16)3707-4400 para desmarcar a cirurgia com antecedência, caso seja necessário levar o paciente (criança) ao clinico geral no nubs para tratamento e somente após total recuperação reagendar a cirurgia; <br>
-												Vir com acompanhante adulto que fique no dia da cirurgia no AME esperando a alta do paciente, se responsabilize por levá-lo para casa e por cuidar do mesmo nos dias subsequentes; <br>
-												Transporte garantido para o domicílio no mesmo dia da cirurgia em carro (próprio ambulância ou táxi); <br>
-												trazer os nomes dos medicamentos em uso; <br>
-												não fumar; <br>
-												Suspender as medicações conforme orientação médica.</h5>
-	                    </p>
-		                </div>
-			            </div>
-			        </div>
-			        <div class="panel panel-default">
-			            <div class="panel-heading" id="heading">
-			                <h3 class="panel-title">
-			                    <a data-toggle="collapse" style="display:block" data-parent="#accordion" href="#collapseEighteen">Colecistectomia</a>
-			                </h3>
-			            </div>
-			            <div id="collapseEighteen" class="panel-collapse collapse">
-			                <div class="panel-body">
-			                    <p id="corpoq">
-			                    	<h4> Preparos</h4>
-			                    	<h5> Vir em jejum de 8 horas,ou seja, após as 23:00 horas jejum absoluto. Caso contrário a cirurgia será desmarcada; <br>
-														Na véspera fazer uma dieta leve (sopa); <br>
-														Vir de banho tomado(importante); <br>
-														Obrigatório trazer o rg,caso contrario terá que buscar em casa ou cancelar o procedimento; <br>
-														vir de sapato antiderrapante para evitar queda. </h5>
+	              	<h4> Orientação</h4>
+	              	<h5> Caso o paciente apresentar tosse, coriza (nariz escorrendo), febre,infeção de garganta ou outros sinais de gripe entrar em contato com ame (16)3707-4400 para desmarcar a cirurgia com antecedência, caso seja necessário levar o paciente (criança) ao clinico geral no nubs para tratamento e somente após total recuperação reagendar a cirurgia; <br>
+									Vir com acompanhante adulto que fique no dia da cirurgia no AME esperando a alta do paciente, se responsabilize por levá-lo para casa e por cuidar do mesmo nos dias subsequentes; <br>
+									Transporte garantido para o domicílio no mesmo dia da cirurgia em carro (próprio ambulância ou táxi); <br>
+									trazer os nomes dos medicamentos em uso; <br>
+									não fumar; <br>
+									Suspender as medicações conforme orientação médica.</h5>
+              	</p>
+				      </div>
+				    </div>
+					</div>
+					<div class="card">
+				    <div class="card-header" id="heading-9">
+				      <h5 class="mb-0">
+				        <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-9" aria-expanded="false" aria-controls="collapse-9">
+				          Colecistectomia
+				        </a>
+				      </h5>
+				    </div>
+				    <div id="collapse-9" class="collapse" data-parent="#accordion" aria-labelledby="heading-9">
+				      <div class="card-body">
+				        <p id="corpoq">
+	              	<h4> Preparos</h4>
+                	<h5> Vir em jejum de 8 horas,ou seja, após as 23:00 horas jejum absoluto. Caso contrário a cirurgia será desmarcada; <br>
+									Na véspera fazer uma dieta leve (sopa); <br>
+									Vir de banho tomado(importante); <br>
+									Obrigatório trazer o rg,caso contrario terá que buscar em casa ou cancelar o procedimento; <br>
+									vir de sapato antiderrapante para evitar queda. </h5>
 
-			                    	<h4> Orientação</h4>
-			                    	<h5> Trazer os exames de imagem (obrigatório); <br>
-														Possuir acompanhante adulto que fique no dia da cirurgia no ame esperando a alta do paciente, se responsabilize por levá-lo para casa e por Cuidar do mesmo nos dias subsequentes; <br>
-														Transporte garantido para o domicílio no mesmo dia da cirurgia em carro (próprio ambulância ou táxi);  <br>
-														Trazer os nomes dos medicamentos em uso; <br>
-														Não fumar; <br>
-														Suspender as medicações conforme orientação médica.</h5>
-			                    </p>
-			                </div>
-			            </div>
-			        </div>
-			        <div class="panel panel-default">
-			            <div class="panel-heading" id="heading">
-			                <h3 class="panel-title">
-			                    <a data-toggle="collapse" style="display:block" data-parent="#accordion" href="#collapseNine">Colonoscopia</a>
-			                </h3>
-			            </div>
-			            <div id="collapseNine" class="panel-collapse collapse">
-			                <div class="panel-body">
-			                  <p id="corpoq"><h4>Dois dias antes do exame: dieta sem resíduos</h4>
-													<h5> Permitido:<br>
-													Arroz, macarrão, filé de peixe ou frango, batatas, caldo de feijão, sopa de legumes batida e coada, sorvete de frutas, gelatina, torradas, bolacha água e sal e muitos líquidos como: agua, água de coco, sucos coados, isotônicos (Gatorade®) e chás (evitar vermelhos ou roxos).<br><br>
-													Proibido:<br>
-													Feijão, milho, ovo, grão de bico, ervilhas, soja, frutas (laranja, mamão, kiwi, morango, goiaba, etc), verduras cruas e cozidas, legumes (ex. tomate, berinjela, pepino, etc), leito ou derivados (iogurtes, coalhadas, queijos, requeijão), refrigerantes, doces, chocolates, sucos com bagaço ou sementes, nozes e castanhas, grão integrais (aveia, arroz integral, linhaça, etc..).</h5><br>
+                	<h4> Orientação</h4>
+                	<h5> Trazer os exames de imagem (obrigatório); <br>
+									Possuir acompanhante adulto que fique no dia da cirurgia no ame esperando a alta do paciente, se responsabilize por levá-lo para casa e por Cuidar do mesmo nos dias subsequentes; <br>
+									Transporte garantido para o domicílio no mesmo dia da cirurgia em carro (próprio ambulância ou táxi);  <br>
+									Trazer os nomes dos medicamentos em uso; <br>
+									Não fumar; <br>
+									Suspender as medicações conforme orientação médica.</h5>
+              	</p>
+				      </div>
+				    </div>
+					</div>
+					<div class="card">
+				    <div class="card-header" id="heading-10">
+				      <h5 class="mb-0">
+				        <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-10" aria-expanded="false" aria-controls="collapse-10">
+				          Colonoscopia
+				        </a>
+				      </h5>
+				    </div>
+				    <div id="collapse-10" class="collapse" data-parent="#accordion" aria-labelledby="heading-10">
+				      <div class="card-body">
+				        <p id="corpoq"><h4>Dois dias antes do exame: dieta sem resíduos</h4>
+									<h5> Permitido:<br>
+									Arroz, macarrão, filé de peixe ou frango, batatas, caldo de feijão, sopa de legumes batida e coada, sorvete de frutas, gelatina, torradas, bolacha água e sal e muitos líquidos como: agua, água de coco, sucos coados, isotônicos (Gatorade®) e chás (evitar vermelhos ou roxos).<br><br>
+									Proibido:<br>
+									Feijão, milho, ovo, grão de bico, ervilhas, soja, frutas (laranja, mamão, kiwi, morango, goiaba, etc), verduras cruas e cozidas, legumes (ex. tomate, berinjela, pepino, etc), leito ou derivados (iogurtes, coalhadas, queijos, requeijão), refrigerantes, doces, chocolates, sucos com bagaço ou sementes, nozes e castanhas, grão integrais (aveia, arroz integral, linhaça, etc..).</h5><br>
 
-													<h4> Um dia antes do exame: dieta líquida sem resíduos</h4>
-													<h5>Permitido:<br>
-													Apenas líquidos como: água (3l), água de coco, chás (evitar vermelhos ou roxos), suco de frutas coados ou artificiais (claros), soro caseiro ou isotônico (gatorade®), gelatinas claras (evitar vermelhas, roxas e azuis), sopa batida e coada (apenas com batata, cenoura e chuchu e mandioquinha). 
-													Tomar 2 comprimidos de bisacodil de 5 mg às 18:00. continuar ingerindo líquidos em abundancia.</h5><br>
+									<h4> Um dia antes do exame: dieta líquida sem resíduos</h4>
+									<h5>Permitido:<br>
+									Apenas líquidos como: água (3l), água de coco, chás (evitar vermelhos ou roxos), suco de frutas coados ou artificiais (claros), soro caseiro ou isotônico (gatorade®), gelatinas claras (evitar vermelhas, roxas e azuis), sopa batida e coada (apenas com batata, cenoura e chuchu e mandioquinha). 
+									Tomar 2 comprimidos de bisacodil de 5 mg às 18:00. continuar ingerindo líquidos em abundancia.</h5><br>
 
-													<h4> No dia do exame: jejum</h4>
-													<h5>Antes de tomar manitol poderá ser ingerido gelatina, ajuda a evitar vômitos (náuseas),
-													tomar (beber) 2 frascos de manitol das 6:30 as 07:00 horas.(poderá sera acrescentado ao manitol 500ml de suco);
-													ingerir liquidos até as 09:00. após as 09:00 ficar em jejum absoluto.<br>
-													Lembre-se que não poderá tomar nada, nem água, após as 09:00 hs.<br>
-													Obs: Caso o exame (colonoscopia) seja realizado pela manha, tomar o bisacodil (laxante) as 18:00h no dia anterior ao exame e tomar o manitol as 20:00h. Ficar em jejum após as 22:00 horas.</h5>
-												</p>
-			                </div>
-			            </div>
-			        </div>
-			        <div class="panel panel-default">
-			            <div class="panel-heading" id="heading">
-			                <h3 class="panel-title">
-			                    <a data-toggle="collapse" style="display:block" data-parent="#accordion" href="#collapseTen">Eletroencefalograma (EEG)</a>
-			                </h3>
-			            </div>
-			            <div id="collapseTen" class="panel-collapse collapse">
-			                <div class="panel-body">
-			                    <p id="corpoq"><h4> Preparo</h4>
-				                    <h5 id="subl"> Adulto </h5>
-				                    <h5>Não é necessário suspender as medicações em uso; <br> 
-				                    Não é necessário jejum; <br>
-				                    Não ingerir alimentos que contenham cafeina (café, chá mate, refrigerante) nas oito horas anteriores ao exame; <br>
-				                    Reduzir as horas de sono na noite anterior, pois as vezes é necessário dormir durante o exame; </h5>
+									<h4> No dia do exame: jejum</h4>
+									<h5>Antes de tomar manitol poderá ser ingerido gelatina, ajuda a evitar vômitos (náuseas),
+									tomar (beber) 2 frascos de manitol das 6:30 as 07:00 horas.(poderá sera acrescentado ao manitol 500ml de suco);
+									ingerir liquidos até as 09:00. após as 09:00 ficar em jejum absoluto.<br>
+									Lembre-se que não poderá tomar nada, nem água, após as 09:00 hs.<br>
+									Obs: Caso o exame (colonoscopia) seja realizado pela manha, tomar o bisacodil (laxante) as 18:00h no dia anterior ao exame e tomar o manitol as 20:00h. Ficar em jejum após as 22:00 horas.</h5>
+								</p>
+				      </div>
+				    </div>
+					</div>
+					<div class="card">
+				    <div class="card-header" id="heading-11">
+				      <h5 class="mb-0">
+				        <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-11" aria-expanded="false" aria-controls="collapse-11">
+				          Eletroencefalograma (EEG)
+				        </a>
+				      </h5>
+				    </div>
+				    <div id="collapse-11" class="collapse" data-parent="#accordion" aria-labelledby="heading-11">
+				      <div class="card-body">
+				        <p id="corpoq"><h4> Preparo</h4>
+                  <h5 id="subl"> Adulto </h5>
+                  <h5>Não é necessário suspender as medicações em uso; <br> 
+                  Não é necessário jejum; <br>
+                  Não ingerir alimentos que contenham cafeina (café, chá mate, refrigerante) nas oito horas anteriores ao exame; <br>
+                  Reduzir as horas de sono na noite anterior, pois as vezes é necessário dormir durante o exame; </h5>
 
-				                    <h5 id="subl"> Criança</h5>  
-				                    <h5> Reduzir as horas de sono da noite anterior;<br>
-				                    Acordar a criança bem cedo, não deixando que durma até a hora do exame;<br>
-				                    Criança que mama no peito vir em jejum de 4 horas;<br>
-				                    Criança que mama leite de vaca e ou consomem outros alimentos virem em jejum de 8 horas. </h5> 
+                  <h5 id="subl"> Criança</h5>  
+                  <h5> Reduzir as horas de sono da noite anterior;<br>
+                  Acordar a criança bem cedo, não deixando que durma até a hora do exame;<br>
+                  Criança que mama no peito vir em jejum de 4 horas;<br>
+                  Criança que mama leite de vaca e ou consomem outros alimentos virem em jejum de 8 horas. </h5> 
 
-				                    <h4> Orientação </h4>
-				                    <h5>Lavar os cabelos na noite anterior ao exame somente com xampu neutro ou sabão de coco (não usar cremes);<br>
-				                    Não usar óleos, sprays ou loções nos cabelos;<br>
-				                    Não vir de aplique nos cabelos e cabelos molhados;<br>
-				                    Ficar sem fumar 04 horas antes do exame;<br>
-				                    Trazer um pente.</h5>
-			                    </p>
-			                </div>
-			            </div>
-			        </div>
-			        <div class="panel panel-default">
-			            <div class="panel-heading" id="heading">
-			                <h3 class="panel-title">
-			                    <a data-toggle="collapse" style="display:block" data-parent="#accordion" href="#collapseEleven">Eletroneuromiografia</a>
-			                </h3>
-			            </div>
-			            <div id="collapseEleven" class="panel-collapse collapse">
-			                <div class="panel-body">
-			                    <p id="corpoq">
-			                    	<h4> Não há preparo</h4>
+                  <h4> Orientação </h4>
+                  <h5>Lavar os cabelos na noite anterior ao exame somente com xampu neutro ou sabão de coco (não usar cremes);<br>
+                  Não usar óleos, sprays ou loções nos cabelos;<br>
+                  Não vir de aplique nos cabelos e cabelos molhados;<br>
+                  Ficar sem fumar 04 horas antes do exame;<br>
+                  Trazer um pente.</h5>
+                </p>
+				      </div>
+				    </div>
+					</div>
+					<div class="card">
+				    <div class="card-header" id="heading-12">
+				      <h5 class="mb-0">
+				        <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-12" aria-expanded="false" aria-controls="collapse-12">
+				          Eletroneuromiografia
+				        </a>
+				      </h5>
+				    </div>
+				    <div id="collapse-12" class="collapse" data-parent="#accordion" aria-labelledby="heading-12">
+				      <div class="card-body">
+				        <p id="corpoq">
+                	<h4> Não há preparo</h4>
 
-			                    	<h4>Orientações</h4>
-			                    	<h5> Pacientes que fazem uso de marcapasso estão proibidos de realizar o exame, conforme protocolo estabelecido; <br>
-			                    	Deve-se evitar o uso de cremes e/ou óleos nos locais a serem examinados, após o ultimo banho que antecede o exame; <br>
-			                    	Trazer short ou bermuda (tamanho acima dos joelhos) largo, para exame de membros inferiores (pernas); <br>
-			                    	Trazer camiseta cavada ou blusa regata para exame de membros superiores (braços) em dias frios venha bem aquecido; <br>
-			                    	Pacientes menores de 18 anos é obrigatório acompanhante maior de idade com documentos; <br>
-			                    	Caso o paciente não obedeça este protocolo será devolvido à unidade de origem. </h5>
-			                    </p>
-			                </div>
-			            </div>
-			        </div>
-			        <div class="panel panel-default">
-			            <div class="panel-heading" id="heading">
-			                <h3 class="panel-title">
-			                    <a data-toggle="collapse" style="display:block" data-parent="#accordion" href="#collapseEight">Endoscopia</a>
-			                </h3>
-			            </div>
-			            <div id="collapseEight" class="panel-collapse collapse">
-			                <div class="panel-body">
-			                    <p id="corpoq">
-			                    	<h4> Preparo</h4>
-			                    	<h5> Jejum de pelo menos 6 horas para líquidos claros e 08 horas para alimentos sólidos; <br>
-			                    	Não tomar nem água; <br>
-			                    	Medicações que não possam ser interrompidas (ex: remédios para pressão alta) podem ser tomadas no dia, com o mínimo de água possível. </h5>
-			                    	
-			                    	<h4>Orientação</h4>
-			                    	<h5> É obrigatório acompanhante maior de 18 anos com documentos; <br>
-			                    	Caso o paciente não obedeça este protocolo será devolvido à unidade de origem.</h5>
-			                    </p>
-			                </div>
-			            </div>
-			        </div>
-			        <div class="panel panel-default">
-			            <div class="panel-heading" id="heading">
-			                <h3 class="panel-title">
-			                    <a data-toggle="collapse" style="display:block" data-parent="#accordion" href="#collapseTwelve">Espirometria (Prova De Funcao Pulmonar Completa)</a>
-			                </h3>
-			            </div>
-			            <div id="collapseTwelve" class="panel-collapse collapse">
-			                <div class="panel-body">
-			                    <p id="corpoq">
-			                    	<h4> Preparo</h4>
-			                    	<h5> Ter uma alimentação leve; <br>
-			                    	Não deve estar em jejum; <br>
-			                    	No dia do exame: não fumar, não tomar chá preto, coca-cola e café;<br>
-			                    	Tomar as medicações de rotina, suspender apenas a medicação inalatória (bombinha); <br>
-			                    	Trazer últimas receitas médicas.</h5>
+                	<h4>Orientações</h4>
+                	<h5> Pacientes que fazem uso de marcapasso estão proibidos de realizar o exame, conforme protocolo estabelecido; <br>
+                	Deve-se evitar o uso de cremes e/ou óleos nos locais a serem examinados, após o ultimo banho que antecede o exame; <br>
+                	Trazer short ou bermuda (tamanho acima dos joelhos) largo, para exame de membros inferiores (pernas); <br>
+                	Trazer camiseta cavada ou blusa regata para exame de membros superiores (braços) em dias frios venha bem aquecido; <br>
+                	Pacientes menores de 18 anos é obrigatório acompanhante maior de idade com documentos; <br>
+                	Caso o paciente não obedeça este protocolo será devolvido à unidade de origem. </h5>
+                </p>
+				      </div>
+				    </div>
+					</div>
+					<div class="card">
+				    <div class="card-header" id="heading-13">
+				      <h5 class="mb-0">
+				        <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-13" aria-expanded="false" aria-controls="collapse-13">
+				          Endoscopia
+				        </a>
+				      </h5>
+				    </div>
+				    <div id="collapse-13" class="collapse" data-parent="#accordion" aria-labelledby="heading-13">
+				      <div class="card-body">
+								<p id="corpoq">
+                	<h4> Preparo</h4>
+                	<h5> Jejum de pelo menos 6 horas para líquidos claros e 08 horas para alimentos sólidos; <br>
+                	Não tomar nem água; <br>
+                	Medicações que não possam ser interrompidas (ex: remédios para pressão alta) podem ser tomadas no dia, com o mínimo de água possível. </h5>
+                	
+                	<h4>Orientação</h4>
+                	<h5> É obrigatório acompanhante maior de 18 anos com documentos; <br>
+                	Caso o paciente não obedeça este protocolo será devolvido à unidade de origem.</h5>
+                </p>
+				      </div>
+				    </div>
+					</div>
+					<div class="card">
+				    <div class="card-header" id="heading-14">
+				      <h5 class="mb-0">
+				        <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-14" aria-expanded="false" aria-controls="collapse-14">
+				          Espirometria (Prova De Funcao Pulmonar Completa)
+				        </a>
+				      </h5>
+				    </div>
+				    <div id="collapse-14" class="collapse" data-parent="#accordion" aria-labelledby="heading-14">
+				      <div class="card-body">
+								<p id="corpoq">
+                	<h4> Preparo</h4>
+                	<h5> Ter uma alimentação leve; <br>
+                	Não deve estar em jejum; <br>
+                	No dia do exame: não fumar, não tomar chá preto, coca-cola e café;<br>
+                	Tomar as medicações de rotina, suspender apenas a medicação inalatória (bombinha); <br>
+                	Trazer últimas receitas médicas.</h5>
 
-			                    	<h4>Orientação</h4>
-			                    	<h5> Trazer últimas receitas médicas;<br>
-			                    	Pacientes menores de 18 anos é obrigatório acompanhante maior de idade com documentos.</h5>
-			                    </p>
-			                </div>
-			            </div>
-			        </div>
-			        <div class="panel panel-default">
-			            <div class="panel-heading" id="heading">
-			                <h3 class="panel-title">
-			                    <a data-toggle="collapse" style="display:block" data-parent="#accordion" href="#collapseFourteen">Holter</a>
-			                </h3>
-			            </div>
-			            <div id="collapseFourteen" class="panel-collapse collapse">
-			                <div class="panel-body">
-			                    <p id="corpoq">
-			                    	<h4> Não há preparo</h4>
+                	<h4>Orientação</h4>
+                	<h5> Trazer últimas receitas médicas;<br>
+                	Pacientes menores de 18 anos é obrigatório acompanhante maior de idade com documentos.</h5>
+                </p>
+				      </div>
+				    </div>
+					</div>
+					<div class="card">
+				    <div class="card-header" id="heading-15">
+				      <h5 class="mb-0">
+				        <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-15" aria-expanded="false" aria-controls="collapse-15">
+				          Holter
+				        </a>
+				      </h5>
+				    </div>
+				    <div id="collapse-15" class="collapse" data-parent="#accordion" aria-labelledby="heading-15">
+				      <div class="card-body">
+								<p id="corpoq">
+                	<h4> Não há preparo</h4>
 
-			                    	<h4> Orientação</h4>
-			                    	<h5> Não é necessário jejum; <br>
-			                    	Vir de banho tomado; <br>
-			                    	Trazer 1 cinto (correa) de calça comum se tiver; <br>
-			                    	Trazer os nomes dos medicamentos que faz uso contínuo se houver; <br>
-			                    	Vir com blusa confortável (mais larga); <br>
-			                    	Pacientes menores de 18 anos é obrigatório acompanhante maior de idade com documentos; <br>
-			                    	Caso o paciente não obedeça este protocolo será devolvido à unidade de origem.</h5>
-			                    </p>
-			                </div>
-			            </div>
-			        </div>
-			        <div class="panel panel-default">
-			            <div class="panel-heading" id="heading">
-			                <h3 class="panel-title">
-			                    <a data-toggle="collapse" style="display:block" data-parent="#accordion" href="#collapseThirteen">Mapa</a>
-			                </h3>
-			            </div>
-			            <div id="collapseThirteen" class="panel-collapse collapse">
-			                <div class="panel-body">
-			                    <p id="corpoq">
-			                    	<h4> Não há preparo</h4>
+                	<h4> Orientação</h4>
+                	<h5> Não é necessário jejum; <br>
+                	Vir de banho tomado; <br>
+                	Trazer 1 cinto (correa) de calça comum se tiver; <br>
+                	Trazer os nomes dos medicamentos que faz uso contínuo se houver; <br>
+                	Vir com blusa confortável (mais larga); <br>
+                	Pacientes menores de 18 anos é obrigatório acompanhante maior de idade com documentos; <br>
+                	Caso o paciente não obedeça este protocolo será devolvido à unidade de origem.</h5>
+                </p>
+				      </div>
+				    </div>
+					</div>
+					<div class="card">
+				    <div class="card-header" id="heading-16">
+				      <h5 class="mb-0">
+				        <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-16" aria-expanded="false" aria-controls="collapse-16">
+				          Mapa
+				        </a>
+				      </h5>
+				    </div>
+				    <div id="collapse-16" class="collapse" data-parent="#accordion" aria-labelledby="heading-16">
+				      <div class="card-body">
+								<p id="corpoq">
+                	<h4> Não há preparo</h4>
 
-			                    	<h4> Orientação</h4>
-			                    	<h5> Não é necessário jejum; <br>
-			                    	Vir de banho tomado; <br>
-			                    	Trazer 1 cinto (correa) de calça comum, se tiver; <br>
-			                    	Evitar passar hidratantes ou óleos hidratantes no tórax; trazer os nomes de todos os medicamentos que faz uso contínuo, se houver; <br>
-			                    	Vir com blusa confortável (mais larga); <br>
-			                    	Pacientes menores de 18 anos é obrigatório acompanhante maior de idade com documentos; <br>
-			                    	Caso o paciente não obedeça este protocolo será devolvido à unidade de origem.</h5>
-			                    </p>
-			                </div>
-			            </div>
-			        </div>
-			        <div class="panel panel-default">
-			            <div class="panel-heading" id="heading">
-			                <h3 class="panel-title">
-			                    <a data-toggle="collapse" style="display:block" data-parent="#accordion" href="#collapseFifteen">Teste Ergométrico</a>
-			                </h3>
-			            </div>
-			            <div id="collapseFifteen" class="panel-collapse collapse">
-			                <div class="panel-body">
-			                    <p id="corpoq">
-			                    	<h4> Preparos</h4>
-			                    	<h5> Não tomar café preto ou chá mate 4 horas antes do exame; <br>
-			                    	Não tomar bebidas alcoólicas; <br>
-			                    	Não fumar 4 horas antes do exame; <br>
-			                    	Vir bem alimentado; <br>
-			                    	Homens virem de peito raspado ate a altura do umbigo. </h5>
+                	<h4> Orientação</h4>
+                	<h5> Não é necessário jejum; <br>
+                	Vir de banho tomado; <br>
+                	Trazer 1 cinto (correa) de calça comum, se tiver; <br>
+                	Evitar passar hidratantes ou óleos hidratantes no tórax; trazer os nomes de todos os medicamentos que faz uso contínuo, se houver; <br>
+                	Vir com blusa confortável (mais larga); <br>
+                	Pacientes menores de 18 anos é obrigatório acompanhante maior de idade com documentos; <br>
+                	Caso o paciente não obedeça este protocolo será devolvido à unidade de origem.</h5>
+                </p>
+				      </div>
+				    </div>
+					</div>
+					<div class="card">
+				    <div class="card-header" id="heading-17">
+				      <h5 class="mb-0">
+				        <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-17" aria-expanded="false" aria-controls="collapse-17">
+				          Teste Ergométrico
+				        </a>
+				      </h5>
+				    </div>
+				    <div id="collapse-17" class="collapse" data-parent="#accordion" aria-labelledby="heading-17">
+				      <div class="card-body">
+								<p id="corpoq">
+                	<h4> Preparos</h4>
+                	<h5> Não tomar café preto ou chá mate 4 horas antes do exame; <br>
+                	Não tomar bebidas alcoólicas; <br>
+                	Não fumar 4 horas antes do exame; <br>
+                	Vir bem alimentado; <br>
+                	Homens virem de peito raspado ate a altura do umbigo. </h5>
 
-			                    	<h4>Orientação mulheres</h4>
-			                    	<h5> Comparecer calçando tênis, sapatilha ou sapato confortável, mulheres vir de top ou sutiã; <br>
-			                    	Atentar para a suspensão de medicações, a medicação suspensa deverá ser de acordoa orientação medica;  <br>
-			                    	Pacientes menores de 18 anos é obrigatório acompanhante maior de idade com documentos; <br>
-			                    	Trazer o pedido do exame e os nomes dos medicamentos em uso. </h5>
+                	<h4>Orientação mulheres</h4>
+                	<h5> Comparecer calçando tênis, sapatilha ou sapato confortável, mulheres vir de top ou sutiã; <br>
+                	Atentar para a suspensão de medicações, a medicação suspensa deverá ser de acordoa orientação medica;  <br>
+                	Pacientes menores de 18 anos é obrigatório acompanhante maior de idade com documentos; <br>
+                	Trazer o pedido do exame e os nomes dos medicamentos em uso. </h5>
 
-			                    	<h4> Orientação homens </h4>
-			                    	<h5> Comparecer calçando tênis, sapatilha ou sapato confortável; <br>
-			                    	Atentar para a suspensão de medicações, a medicação suspensa deverá ser de acordo a orientação medica; <br>
-			                    	Pacientes menores de 18 anos é obrigatório acompanhante maior de idade com documentos; <br>
-			                    	Trazer o pedido do exame; <br>
-			                    	Trazer os nomes dos medicamentos em uso. </h5>
-			                    </p>
-			                </div>
-			            </div>
-			        </div>
-			        <div class="panel panel-default">
-			            <div class="panel-heading" id="heading">
-			                <h3 class="panel-title">
-			                    <a data-toggle="collapse" style="display:block" data-parent="#accordion" href="#collapseSixteen">Urodinâmica</a>
-			                </h3>
-			            </div>
-			            <div id="collapseSixteen" class="panel-collapse collapse">
-			                <div class="panel-body">
-			                    <p id="corpoq">
-			                    	<h4> Preparos</h4>
-			                    	<h5> Urinar duas horas antes do exame e após manter bexiga cheia para realizar o exame;  <br>
-			                    	É obrigatorio trazer o resultado de exame de urocultura (recente, menos de 30 dias),caso contrário o exame não será realizado; <br>
-			                    	Realizar tricotomia (depilação das partes intimas); <br>
-			                    	Obrigatório trazer resultado de urocultura negativo, caso contrario o exame será desmarcado. </h5>
+                	<h4> Orientação homens </h4>
+                	<h5> Comparecer calçando tênis, sapatilha ou sapato confortável; <br>
+                	Atentar para a suspensão de medicações, a medicação suspensa deverá ser de acordo a orientação medica; <br>
+                	Pacientes menores de 18 anos é obrigatório acompanhante maior de idade com documentos; <br>
+                	Trazer o pedido do exame; <br>
+                	Trazer os nomes dos medicamentos em uso. </h5>
+                </p>
+				      </div>
+				    </div>
+					</div>
+					<div class="card">
+				    <div class="card-header" id="heading-18">
+				      <h5 class="mb-0">
+				        <a class="collapsed" role="button" data-toggle="collapse" href="#collapse-18" aria-expanded="false" aria-controls="collapse-18">
+				          Urodinâmica
+				        </a>
+				      </h5>
+				    </div>
+				    <div id="collapse-18" class="collapse" data-parent="#accordion" aria-labelledby="heading-18">
+				      <div class="card-body">
+								<p id="corpoq">
+                	<h4> Preparos</h4>
+                	<h5> Urinar duas horas antes do exame e após manter bexiga cheia para realizar o exame;  <br>
+                	É obrigatorio trazer o resultado de exame de urocultura (recente, menos de 30 dias),caso contrário o exame não será realizado; <br>
+                	Realizar tricotomia (depilação das partes intimas); <br>
+                	Obrigatório trazer resultado de urocultura negativo, caso contrario o exame será desmarcado. </h5>
 
-			                    	<h4> Orientação homens</h4>
-			                    	<h5> Trazer anotado as medicações em uso; <br>
-			                    	Trazer outros exames (ultra som - raio x - etc..); <br>
-			                    	É obrigatório acompanhante maior de 18 anos com documentos; <br>
-			                    	O resultado do exame será entregue 08 dias após o procedimento.</h5>
+                	<h4> Orientação homens</h4>
+                	<h5> Trazer anotado as medicações em uso; <br>
+                	Trazer outros exames (ultra som - raio x - etc..); <br>
+                	É obrigatório acompanhante maior de 18 anos com documentos; <br>
+                	O resultado do exame será entregue 08 dias após o procedimento.</h5>
 
-			                    	<h4> Orientação mulheres </h4>
-			                    	<h5> Trazer anotado as medicações em uso; <br>
-			                    	Comunicar ao ame com antecedência de 24 horas caso a paciente esteja menstruada; <br>
-			                    	É obrigatório acompanhante maior de 18 anos com documentos; <br>
-			                    	O resultado do exame será entregue 08 dias após o procedimento. </h5>
-			                    </p>
-			                </div>
-			            </div>
-			        </div>
-			    </div>
-	    	</div>
+                	<h4> Orientação mulheres </h4>
+                	<h5> Trazer anotado as medicações em uso; <br>
+                	Comunicar ao ame com antecedência de 24 horas caso a paciente esteja menstruada; <br>
+                	É obrigatório acompanhante maior de 18 anos com documentos; <br>
+                	O resultado do exame será entregue 08 dias após o procedimento. </h5>
+                </p>
+				      </div>
+				    </div>
+					</div>
+				</div>
+				<span><br></span>
 	    </div>
-	</body>
+		</body>
 	<footer>
 	</footer>
 </html>

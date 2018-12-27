@@ -1,74 +1,58 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Slick Playground</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="UTF-8">
-
-
-  <style>
-	 	a:hover,
-	  a:visited,
-	  a:active,
-	  a:link {
-	    text-decoration: none;
-	  }
-	  body{font-family: 'Roboto', sans-serif;}
-
-
-
-	</style>
-</head>
-<body>
-	<div class="jumbotron" id="jumbo" >
-		<h2 id="title">Bem vindo!</h2>
-		<h4></h4>
-		<div class="container" >
-			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="4500">
-			  <!-- Indicators -->
-			  <ol class="carousel-indicators">
-			    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-			    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-			    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-			  </ol>
-
-			  <!-- Wrapper for slides (686 × 274 pixels (Natural: 1200 × 480 pixels)) -->
-			  <div class="carousel-inner" role="listbox">
-				  <div class="item active">
-				    <a href="/novembroAzul"> <img class="img-responsive" id="thumbhome" src="<%= asset_path('CarouselSlide2.jpg') %>" >
-				    <div id="divCaption" class="carousel-caption">
-				       <a id="titleCaption" href="/novembroAzul" style="color: white">Novembro Azul</a><br>
-				       Mês de Conscientização a Saúde do Homem!
+	<head>
+	  <title>Home</title>
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <meta charset="UTF-8">
+	  <style>
+		 	a:hover,
+		  a:visited,
+		  a:active,
+		  a:link {
+		    text-decoration: none;
+		  }
+		  body{font-family: 'Roboto', sans-serif;}
+		</style>
+	</head>
+	<body>
+		<div class="jumbotron" id="jumbo" >
+			<h2 id="title">Bem vindo!</h2>
+			<h4></h4>
+			<div class="container" >
+				<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+	  			<div class="carousel-inner">
+				    <div class="carousel-item active">
+				      <a href="/novembroAzul"><img class="d-block w-100" src="<%= asset_path('CarouselSlide2.jpg') %>" alt="First slide">
+				      <div class="carousel-caption d-none d-sm-block">
+			          <h6>Novembro Azul</h6>
+			          <h5>Mês de Conscientização a Saúde do Homem!</h5>
+			        </div></a>
+				    </div>
+				    <div class="carousel-item">
+				      <a href="/outubroRosa"><img class="d-block w-100" src="<%= asset_path('outRosa.png') %>" alt="Second slide">
+				      <div class="carousel-caption d-none d-sm-block">
+			          <h6>Outubro Rosa</h6>
+			          <h5>A detecção precoce pode salvar sua vida!</h5>
+			        </div></a>
+				    </div>
+				    <div class="carousel-item">
+				      <a href="/galery"><img class="d-block w-100" src="<%= asset_path('banner1.jpg') %>" alt="Third slide">
+				      <div class="carousel-caption d-none d-sm-block">
+			          <h6>Ame Franca</h6>
+			          <h5>Conheça um pouco da nossa estrutura!</h5>
+			        </div></a>
 				    </div>
 				  </div>
-			    <div class="item">
-			      <a href="/outubroRosa"> <img class="img-responsive" id="thumbhome" src="<%= asset_path('outRosa.png') %>" >
-			      <div id="divCaption" class="carousel-caption">
-			       <a id="titleCaption" href="/outubroRosa" style="color: white">Outubro Rosa</a><br>
-			       A detecção precoce pode salvar sua vida!
-			      </div>
-			    </div>
-			    <div class="item">
-			      <a href="/galery"> <img class="img-responsive" id="thumbhome" src="<%= asset_path('banner1.jpg') %>" >
-			      <div id="divCaption" class="carousel-caption">
-			       <a id="titleCaption" href="/galery" style="color: white">Ame Franca</a><br>
-			       Conheça um pouco da nossa estrutura!
-			      </div>
-			    </div>
-				  
+				  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+				    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				    <span class="sr-only">Previous</span>
+				  </a>
+				  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+				    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				    <span class="sr-only">Next</span>
+				  </a>
 				</div>
-
-			  <!-- Controls -->
-			  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-			    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-			    <span class="sr-only">Previous</span>
-			  </a>
-			  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-			    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-			    <span class="sr-only">Next</span>
-			  </a>
 			</div>
 		</div>
-	</div>
-</body>
+	</body>
 </html>
